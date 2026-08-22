@@ -1,0 +1,20 @@
+{
+  "name": "cospark",
+  "interface": {
+    "displayName": "CoSpark"
+  },
+  "plugins": [
+    {
+      "name": "cospark-media",
+      "source": {
+        "source": "local",
+        "path": "./plugins/cospark-media"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

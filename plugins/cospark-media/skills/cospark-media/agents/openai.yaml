@@ -1,0 +1,11 @@
+interface:
+  display_name: "CoSpark Media"
+  short_description: "Generate CoSpark images and videos"
+  default_prompt: "Use $cospark-media to create a video from my reference image."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "cospark"
+      description: "CoSpark image and video generation tools"
+      transport: "streamable_http"
+      url: "https://api.cospark.so/api/mcp/cospark"
