@@ -1,6 +1,6 @@
-# CoSpark AI
+# Cospark
 
-Generate images and videos from AI agents through CoSpark's authenticated remote MCP server.
+Generate images and videos from AI agents through Cospark's authenticated remote MCP server.
 
 MCP server: `https://api.cospark.so/api/mcp/cospark`
 
@@ -29,7 +29,7 @@ Then authenticate:
 codex mcp login cospark
 ```
 
-Codex opens the CoSpark sign-in flow and stores the resulting OAuth credentials locally.
+Codex opens the Cospark sign-in flow and stores the resulting OAuth credentials locally.
 
 ## Install the plugin from this repository
 
@@ -38,7 +38,7 @@ The plugin adds workflow guidance for model selection, local media uploads, fram
 ```sh
 git clone https://github.com/corift/cospark-ai.git
 codex plugin marketplace add ./cospark-ai
-codex plugin add cospark-media@cospark
+codex plugin add cospark@cospark
 ```
 
 Start a new Codex thread after installation so the skill and MCP tools are loaded.
@@ -59,10 +59,10 @@ Public media URLs can be used directly. Local files use a two-step signed upload
 
 1. Call `upload_media` with the filename, media type, and byte size.
 2. PUT the local file bytes to the returned signed URL using the returned headers.
-3. Use the returned CoSpark file ID in a generation tool.
+3. Use the returned Cospark file ID in a generation tool.
 
 Local files can be images, videos, or audio up to 100 MB.
 
 ## License
 
-The distribution package in this repository is licensed under the MIT License. The CoSpark service and API remain subject to the [CoSpark Terms of Service](https://cospark.so/terms).
+The distribution package in this repository is licensed under the MIT License. The Cospark service and API remain subject to the [Cospark Terms of Service](https://cospark.so/terms).

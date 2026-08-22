@@ -1,9 +1,9 @@
 {
-  "name": "cospark-media",
+  "name": "cospark",
   "version": "0.1.0",
-  "description": "Generate images and videos with CoSpark from ChatGPT and Codex.",
+  "description": "Generate images and videos with Cospark from ChatGPT and Codex.",
   "author": {
-    "name": "CoSpark",
+    "name": "Cospark",
     "url": "https://cospark.so"
   },
   "homepage": "https://cospark.so",
@@ -12,17 +12,17 @@
   "keywords": ["ai", "image-generation", "video-generation", "mcp"],
   "skills": "./skills/",
   "interface": {
-    "displayName": "CoSpark Media",
-    "shortDescription": "Generate AI images and videos with CoSpark.",
-    "longDescription": "Create images, text-to-video generations, frame-guided videos, and reference-driven videos through your CoSpark account.",
-    "developerName": "CoSpark",
+    "displayName": "Cospark",
+    "shortDescription": "Generate AI images and videos with Cospark.",
+    "longDescription": "Create images, text-to-video generations, frame-guided videos, and reference-driven videos through your Cospark account.",
+    "developerName": "Cospark",
     "category": "Productivity",
     "capabilities": ["Interactive", "Write"],
     "websiteURL": "https://cospark.so",
     "privacyPolicyURL": "https://cospark.so/privacy",
     "termsOfServiceURL": "https://cospark.so/terms",
     "defaultPrompt": [
-      "Generate a cinematic image with CoSpark.",
+      "Generate a cinematic image with Cospark.",
       "Animate this image into a five-second video.",
       "Create a video using these reference files."
     ],

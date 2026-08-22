@@ -1,4 +1,4 @@
-# CoSpark video models
+# Cospark video models
 
 Use automatic selection unless the user names a model or a workflow needs a specific capability.
 
@@ -12,4 +12,4 @@ Use automatic selection unless the user names a model or a workflow needs a spec
 
 Automatic selection currently uses Gemini Omni for text-to-video and Seedance 2.5 for frame or reference workflows.
 
-`generate_image` currently creates a square 1K image using CoSpark's default image model. It does not accept a model override.
+`generate_image` currently creates a square 1K image using Cospark's default image model. It does not accept a model override.

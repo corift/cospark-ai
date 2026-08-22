@@ -1,14 +1,14 @@
 {
   "name": "cospark",
   "interface": {
-    "displayName": "CoSpark"
+    "displayName": "Cospark"
   },
   "plugins": [
     {
-      "name": "cospark-media",
+      "name": "cospark",
       "source": {
         "source": "local",
-        "path": "./plugins/cospark-media"
+        "path": "./plugins/cospark"
       },
       "policy": {
         "installation": "AVAILABLE",

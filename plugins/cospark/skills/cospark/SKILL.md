@@ -1,11 +1,11 @@
 ---
-name: cospark-media
-description: Generate CoSpark images and videos, including text-to-video, frame-guided animation, reference-driven video, and media uploads. Use when a user asks to create visual media with CoSpark.
+name: cospark
+description: Generate Cospark images and videos, including text-to-video, frame-guided animation, reference-driven video, and media uploads. Use when a user asks to create visual media with Cospark.
 ---
 
-# CoSpark Media
+# Cospark
 
-Use the CoSpark MCP tools to produce the requested media. Preserve the user's creative direction and avoid adding unnecessary generation parameters.
+Use the Cospark MCP tools to produce the requested media. Preserve the user's creative direction and avoid adding unnecessary generation parameters.
 
 ## Choose the tool
 
@@ -13,13 +13,13 @@ Use the CoSpark MCP tools to produce the requested media. Preserve the user's cr
 - Use `generate_video` for text-to-video.
 - Use `generate_video_from_frames` when the user provides a starting image or exact start and end images.
 - Use `generate_video_with_references` when images, videos, or audio should guide the result without serving as exact boundary frames.
-- Use `upload_media` only when a local file or public URL must become a CoSpark media source.
+- Use `upload_media` only when a local file or public URL must become a Cospark media source.
 
-Let CoSpark select the video model unless the user requests one or the references require a capability documented in [references/video-models.md](references/video-models.md). Read that reference before selecting a model explicitly or correcting an unsupported configuration.
+Let Cospark select the video model unless the user requests one or the references require a capability documented in [references/video-models.md](references/video-models.md). Read that reference before selecting a model explicitly or correcting an unsupported configuration.
 
 ## Handle media inputs
 
-Public media URLs can be passed directly to generation tools. Import them with `upload_media` when a stable CoSpark file ID is useful across multiple calls.
+Public media URLs can be passed directly to generation tools. Import them with `upload_media` when a stable Cospark file ID is useful across multiple calls.
 
 For a local image, video, or audio file:
 
@@ -34,5 +34,5 @@ Do not expose the signed upload URL as the final result. It is temporary. If the
 
 - Use only `16:9` or `9:16`; default to `16:9` unless the request or source composition clearly indicates portrait.
 - Treat model validation errors as actionable guidance. Adjust automatically only when doing so preserves the user's intent; otherwise explain the supported choices.
-- Generation uses the authenticated user's CoSpark account and credits. Do not retry a failed or timed-out generation if doing so could create another charged job without the user's approval.
-- Return the final durable CoSpark media URL and, when useful, its file ID. Do not present temporary upload URLs as generated assets.
+- Generation uses the authenticated user's Cospark account and credits. Do not retry a failed or timed-out generation if doing so could create another charged job without the user's approval.
+- Return the final durable Cospark media URL and, when useful, its file ID. Do not present temporary upload URLs as generated assets.
