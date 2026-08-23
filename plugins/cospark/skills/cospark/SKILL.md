@@ -1,6 +1,6 @@
 ---
 name: cospark
-description: Generate and edit media with Cospark, including images, videos, talking-head UGC, voiceovers, media inspection, uploads, and simple timelines. Use when a user asks to create or edit media with Cospark.
+description: Generate and edit media with Cospark, including images, videos, talking-head UGC, voiceovers, media inspection, uploads, workspaces, and simple timelines. Use when a user asks to create or edit media with Cospark.
 ---
 
 # Cospark
@@ -19,7 +19,9 @@ Use the Cospark MCP tools to produce the requested media. Preserve the user's cr
 - Use `inspect_media` before making content-based cuts or claiming what happens inside video or audio.
 - Use `upload_media` only when a local file or public URL must become a Cospark media source.
 
-For simple editing, use `read_timeline`, `compose_timeline`, and `edit_timeline` to inspect a timeline, arrange media on tracks, trim clips, and make cuts. Read the current timeline before editing an existing composition.
+Use `list_workspaces` to find an existing workspace and its session ID. Use `create_workspace` when a new editable workspace is needed; optionally call `list_projects` first to attach it to an existing project. Project creation is not available through these tools.
+
+For simple editing, pass the workspace session ID to `read_timeline`, `compose_timeline`, and `edit_timeline` to inspect a timeline, arrange media on tracks, trim clips, and make cuts. Read the current timeline before editing an existing composition.
 
 Let Cospark select the video model unless the user requests one or the references require a capability documented in [references/video-models.md](references/video-models.md). Read that reference before selecting a model explicitly or correcting an unsupported configuration.
 
