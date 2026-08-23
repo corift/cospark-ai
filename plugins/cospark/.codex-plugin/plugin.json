@@ -1,7 +1,7 @@
 {
   "name": "cospark",
-  "version": "0.1.0",
-  "description": "Generate images and videos with Cospark from ChatGPT and Codex.",
+  "version": "0.2.0",
+  "description": "Generate and edit images, videos, UGC, and voiceovers with Cospark.",
   "author": {
     "name": "Cospark",
     "url": "https://cospark.so"
@@ -9,12 +9,12 @@
   "homepage": "https://cospark.so",
   "repository": "https://github.com/corift/cospark-ai",
   "license": "MIT",
-  "keywords": ["ai", "image-generation", "video-generation", "mcp"],
+  "keywords": ["ai", "image-generation", "video-generation", "ugc", "voiceover", "mcp"],
   "skills": "./skills/",
   "interface": {
     "displayName": "Cospark",
-    "shortDescription": "Generate AI images and videos with Cospark.",
-    "longDescription": "Create images, text-to-video generations, frame-guided videos, and reference-driven videos through your Cospark account.",
+    "shortDescription": "Generate and edit media with Cospark.",
+    "longDescription": "Create images, videos, talking-head UGC, and voiceovers, inspect media, and assemble simple timelines through your Cospark account.",
     "developerName": "Cospark",
     "category": "Productivity",
     "capabilities": ["Interactive", "Write"],
@@ -24,7 +24,8 @@
     "defaultPrompt": [
       "Generate a cinematic image with Cospark.",
       "Animate this image into a five-second video.",
-      "Create a video using these reference files."
+      "Create a UGC talking-head video from this image and script.",
+      "Generate a voiceover and assemble these clips on a timeline."
     ],
     "brandColor": "#000000",
     "composerIcon": "./assets/icon.png",
