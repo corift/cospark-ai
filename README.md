@@ -1,6 +1,6 @@
 # Cospark
 
-Generate images and videos from AI agents through Cospark's authenticated remote MCP server.
+Generate and edit images, videos, UGC, and voiceovers from AI agents through Cospark's authenticated remote MCP server.
 
 MCP server: `https://api.cospark.so/api/mcp/cospark`
 
@@ -10,7 +10,14 @@ MCP server: `https://api.cospark.so/api/mcp/cospark`
 - `generate_video` — generate a video from text.
 - `generate_video_from_frames` — animate a starting image with an optional ending image.
 - `generate_video_with_references` — guide a video with reference images, videos, or audio.
+- `generate_ugc_video` — create a complete 9:16 talking-head video from a script, direction, and character image.
+- `list_voices` — list available voice IDs and their characteristics.
+- `generate_voiceover` — create narrated audio with duration and timestamped segments.
+- `inspect_media` — inspect video or audio and return timing, transcript, scene, and contact-sheet information.
 - `upload_media` — import a public URL or prepare a signed upload for a local media file.
+- `read_timeline` — read the current tracks and items in a timeline.
+- `compose_timeline` — create a simple multi-track timeline.
+- `edit_timeline` — add, remove, move, or trim timeline items.
 
 ## Connect with Codex
 
@@ -33,7 +40,7 @@ Codex opens the Cospark sign-in flow and stores the resulting OAuth credentials 
 
 ## Install the plugin from this repository
 
-The plugin adds workflow guidance for model selection, local media uploads, frame animation, and reference-driven video.
+The plugin adds workflow guidance for media generation, voice selection, inspection, uploads, and simple timeline editing.
 
 ```sh
 git clone https://github.com/corift/cospark-ai.git

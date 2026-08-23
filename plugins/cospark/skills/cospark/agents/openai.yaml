@@ -1,11 +1,11 @@
 interface:
   display_name: "Cospark"
-  short_description: "Generate Cospark images and videos"
-  default_prompt: "Use $cospark to create a video from my reference image."
+  short_description: "Generate and edit media with Cospark"
+  default_prompt: "Use $cospark to create a UGC talking-head video from my reference image and script."
 dependencies:
   tools:
     - type: "mcp"
       value: "cospark"
-      description: "Cospark image and video generation tools"
+      description: "Cospark media generation, inspection, voice, and timeline tools"
       transport: "streamable_http"
       url: "https://api.cospark.so/api/mcp/cospark"
