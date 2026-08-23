@@ -15,6 +15,9 @@ MCP server: `https://api.cospark.so/api/mcp/cospark`
 - `generate_voiceover` — create narrated audio with duration and timestamped segments.
 - `inspect_media` — inspect video or audio and return timing, transcript, scene, and contact-sheet information.
 - `upload_media` — import a public URL or prepare a signed upload for a local media file.
+- `list_projects` — list existing projects that can contain a workspace.
+- `create_workspace` — create an editable workspace and return its session ID and chat URL.
+- `list_workspaces` — list recent workspaces in cursor-paginated pages of up to 10.
 - `read_timeline` — read the current tracks and items in a timeline.
 - `compose_timeline` — create a simple multi-track timeline.
 - `edit_timeline` — add, remove, move, or trim timeline items.
@@ -40,7 +43,7 @@ Codex opens the Cospark sign-in flow and stores the resulting OAuth credentials 
 
 ## Install the plugin from this repository
 
-The plugin adds workflow guidance for media generation, voice selection, inspection, uploads, and simple timeline editing.
+The plugin adds workflow guidance for media generation, voice selection, inspection, uploads, workspace discovery, and simple timeline editing.
 
 ```sh
 git clone https://github.com/corift/cospark-ai.git

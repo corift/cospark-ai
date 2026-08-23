@@ -1,6 +1,6 @@
 {
   "name": "cospark",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Generate and edit images, videos, UGC, and voiceovers with Cospark for AI agents like ChatGPT, Codex, and Claude Code.",
   "author": {
     "name": "Cospark",
@@ -14,7 +14,7 @@
   "interface": {
     "displayName": "Cospark",
     "shortDescription": "Generate and edit media with Cospark.",
-    "longDescription": "Create images, videos, talking-head UGC, and voiceovers, inspect media, and assemble simple timelines through your Cospark account.",
+    "longDescription": "Create images, videos, talking-head UGC, and voiceovers, inspect media, manage editable workspaces, and assemble simple timelines through your Cospark account.",
     "developerName": "Cospark",
     "category": "Productivity",
     "capabilities": ["Interactive", "Write"],
@@ -25,7 +25,8 @@
       "Generate a cinematic image with Cospark.",
       "Animate this image into a five-second video.",
       "Create a UGC talking-head video from this image and script.",
-      "Generate a voiceover and assemble these clips on a timeline."
+      "Generate a voiceover and assemble these clips on a timeline.",
+      "Create a workspace in one of my existing projects."
     ],
     "brandColor": "#000000",
     "composerIcon": "./assets/icon.png",
