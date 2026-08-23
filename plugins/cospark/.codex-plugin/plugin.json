@@ -1,7 +1,7 @@
 {
   "name": "cospark",
   "version": "0.2.0",
-  "description": "Generate and edit images, videos, UGC, and voiceovers with Cospark.",
+  "description": "Generate and edit images, videos, UGC, and voiceovers with Cospark for AI agents like ChatGPT, Codex, and Claude Code.",
   "author": {
     "name": "Cospark",
     "url": "https://cospark.so"
