@@ -13,7 +13,8 @@ Use the Cospark MCP tools to produce the requested media. Preserve the user's cr
 - Use `generate_video` for text-to-video.
 - Use `generate_video_from_frames` when the user provides a starting image or exact start and end images.
 - Use `generate_video_with_references` when images, videos, or audio should guide the result without serving as exact boundary frames.
-- Use `generate_ugc_video` for one complete 9:16 talking-head video from an exact spoken script, concise creative direction, and character reference image.
+- Use `generate_ugc_video` once to start one complete 9:16 talking-head video from an exact spoken script, concise creative direction, and character reference image. Save the returned run ID.
+- Poll `get_ugc_video_status` with that run ID until it completes or fails. A pending response is normal; wait for its suggested interval and never start a replacement run because of a timeout or pending status.
 - Use `list_voices` when a voiceover needs a specific voice, then pass its ID to `generate_voiceover`.
 - Use `generate_voiceover` for narration or standalone spoken audio.
 - Use `inspect_media` before making content-based cuts or claiming what happens inside video or audio.
@@ -43,5 +44,5 @@ Do not expose the signed upload URL as the final result. It is temporary. If the
 - Use only `16:9` or `9:16`; default to `16:9` unless the request or source composition clearly indicates portrait.
 - Treat model validation errors as actionable guidance. Adjust automatically only when doing so preserves the user's intent; otherwise explain the supported choices.
 - Generation uses the authenticated user's Cospark account and credits. Do not retry a failed or timed-out generation if doing so could create another charged job without the user's approval.
-- Talking-head UGC generation takes several minutes. Call it once for a deliverable; its result includes a contact sheet for visual review.
+- Talking-head UGC generation takes several minutes. Start it once, then poll its status for the reviewed final result.
 - Return the final durable Cospark media URL and, when useful, its file ID. Do not present temporary upload URLs as generated assets.

@@ -10,7 +10,8 @@ MCP server: `https://api.cospark.so/api/mcp/cospark`
 - `generate_video` — generate a video from text.
 - `generate_video_from_frames` — animate a starting image with an optional ending image.
 - `generate_video_with_references` — guide a video with reference images, videos, or audio.
-- `generate_ugc_video` — create a complete 9:16 talking-head video from a script, direction, and character image.
+- `generate_ugc_video` — start a complete 9:16 talking-head video from a script, direction, and character image.
+- `get_ugc_video_status` — poll a talking-head run until its reviewed final video is ready.
 - `list_voices` — list available voice IDs and their characteristics.
 - `generate_voiceover` — create narrated audio with duration and timestamped segments.
 - `inspect_media` — inspect video or audio and return timing, transcript, scene, and contact-sheet information.
