@@ -1,6 +1,6 @@
 {
   "name": "cospark",
-  "version": "0.3.2",
+  "version": "0.3.2+codex.20260827223913",
   "description": "Generate and edit images, videos, UGC, and voiceovers with Cospark for AI agents like ChatGPT, Codex, and Claude Code.",
   "author": {
     "name": "Cospark",
@@ -9,7 +9,14 @@
   "homepage": "https://cospark.so",
   "repository": "https://github.com/corift/cospark-ai",
   "license": "MIT",
-  "keywords": ["ai", "image-generation", "video-generation", "ugc", "voiceover", "mcp"],
+  "keywords": [
+    "ai",
+    "image-generation",
+    "video-generation",
+    "ugc",
+    "voiceover",
+    "mcp"
+  ],
   "skills": "./skills/",
   "interface": {
     "displayName": "Cospark",
@@ -17,7 +24,10 @@
     "longDescription": "Create images, videos, talking-head UGC, and voiceovers, inspect media, manage editable workspaces, and assemble simple timelines through your Cospark account.",
     "developerName": "Cospark",
     "category": "Productivity",
-    "capabilities": ["Interactive", "Write"],
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
     "websiteURL": "https://cospark.so",
     "privacyPolicyURL": "https://cospark.so/privacy",
     "termsOfServiceURL": "https://cospark.so/terms",

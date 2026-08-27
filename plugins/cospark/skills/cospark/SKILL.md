@@ -13,7 +13,7 @@ Use the Cospark MCP tools to produce the requested media. Preserve the user's cr
 - Use `generate_video` for text-to-video.
 - Use `generate_video_from_frames` when the user provides a starting image or exact start and end images.
 - Use `generate_video_with_references` when images, videos, or audio should guide the result without serving as exact boundary frames.
-- Use `generate_ugc_video` once to start one complete 9:16 talking-head video from an exact spoken script, concise creative direction, and character reference image. Save the returned run ID.
+- Use `generate_ugc_video` once to start one complete 9:16 talking-head video from an exact spoken script, concise creative direction, and character reference image. It defaults to `minimax-h3-max`; pass `gemini-omni` only when the user requests Gemini. Save the returned run ID.
 - Poll `get_ugc_video_status` with that run ID until it completes or fails. A pending response is normal; wait for its suggested interval and never start a replacement run because of a timeout or pending status.
 - Use `list_voices` when a voiceover needs a specific voice, then pass its ID to `generate_voiceover`.
 - Use `generate_voiceover` for narration or standalone spoken audio.
