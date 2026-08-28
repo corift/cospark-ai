@@ -42,17 +42,18 @@ codex mcp login cospark
 
 Codex opens the Cospark sign-in flow and stores the resulting OAuth credentials locally.
 
-## Install the plugin from this repository
+## Install the plugin from GitHub
 
 The plugin adds workflow guidance for media generation, voice selection, inspection, uploads, workspace discovery, and simple timeline editing.
 
 ```sh
-git clone https://github.com/corift/cospark-ai.git
-codex plugin marketplace add ./cospark-ai
+codex plugin marketplace add corift/cospark-ai --ref main
 codex plugin add cospark@cospark
 ```
 
-Start a new Codex thread after installation so the skill and MCP tools are loaded.
+Codex checks configured Git marketplaces during startup and refreshes installed plugins when their repository changes. Start a new Codex thread after installation or an update so the latest skill and MCP tools are loaded.
+
+For plugin bundle changes, update `plugins/cospark`, bump the version in `plugins/cospark/.codex-plugin/plugin.json`, and push the commit to `main`. Changes made only to the hosted MCP implementation become available when the server is deployed and do not require a plugin version bump unless the bundled skill, manifest, or MCP configuration also changes.
 
 ## Other MCP clients
 
