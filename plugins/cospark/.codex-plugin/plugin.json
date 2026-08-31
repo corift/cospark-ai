@@ -1,7 +1,7 @@
 {
   "name": "cospark",
-  "version": "0.3.2+codex.20260828205627",
-  "description": "Generate and edit images, videos, UGC, and voiceovers with Cospark for AI agents like ChatGPT, Codex, and Claude Code.",
+  "version": "0.3.2+codex.20260831145519",
+  "description": "Create end-to-end AI video ads from ChatGPT, Codex, and other agents with Cospark.",
   "author": {
     "name": "Cospark",
     "url": "https://cospark.so"
@@ -20,8 +20,8 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "Cospark",
-    "shortDescription": "Generate and edit media with Cospark.",
-    "longDescription": "Create images, videos, talking-head UGC, and voiceovers, inspect media, manage editable workspaces, and assemble simple timelines through your Cospark account.",
+    "shortDescription": "Create end-to-end AI video ads from chat.",
+    "longDescription": "Turn scripts and product media into UGC hooks, talking-head ad bodies, product shots, voiceovers, and editable timelines. Inspect exact dialogue and refine individual shots without leaving ChatGPT or Codex.",
     "developerName": "Cospark",
     "category": "Productivity",
     "capabilities": [
@@ -32,11 +32,11 @@
     "privacyPolicyURL": "https://cospark.so/privacy",
     "termsOfServiceURL": "https://cospark.so/terms",
     "defaultPrompt": [
-      "Generate a cinematic image with Cospark.",
-      "Animate this image into a five-second video.",
-      "Create a UGC talking-head video from this image and script.",
-      "Generate a voiceover and assemble these clips on a timeline.",
-      "Create a workspace in one of my existing projects."
+      "Create a UGC ad from my reference images and script.",
+      "Generate three short hook variants from this exact starting frame and keep the character consistent.",
+      "Inspect this finished ad and identify any spoken line that differs from my script.",
+      "Replace only the flawed section of this UGC ad without regenerating the full video.",
+      "Assemble these hooks, body clips, and voiceover into an editable ad timeline."
     ],
     "brandColor": "#000000",
     "composerIcon": "./assets/icon.png",
