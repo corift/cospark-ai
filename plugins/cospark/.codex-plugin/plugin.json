@@ -1,6 +1,6 @@
 {
   "name": "cospark",
-  "version": "0.3.2+codex.20260831145519",
+  "version": "0.3.2+codex.20260831220948",
   "description": "Create end-to-end AI video ads from ChatGPT, Codex, and other agents with Cospark.",
   "author": {
     "name": "Cospark",
@@ -39,8 +39,8 @@
       "Assemble these hooks, body clips, and voiceover into an editable ad timeline."
     ],
     "brandColor": "#000000",
-    "composerIcon": "./assets/icon.png",
-    "logo": "./assets/icon.png"
+    "composerIcon": "./assets/icon-submission.png",
+    "logo": "./assets/icon-submission.png"
   },
   "mcpServers": "./.mcp.json"
 }
