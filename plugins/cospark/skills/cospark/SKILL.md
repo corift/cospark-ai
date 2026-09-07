@@ -19,7 +19,7 @@ Use the Cospark MCP tools to turn scripts and product media into finished, edita
 - If a completed UGC ad needs one shot fixed, generate only the replacement clip with the appropriate standard video tool. Do not rerun the full UGC workflow unless the whole video needs to be regenerated.
 - Use `list_voices` when a voiceover needs a specific voice, then pass its ID to `generate_voiceover`.
 - Use `generate_voiceover` for narration or standalone spoken audio.
-- Use `inspect_media` before making content-based cuts or claiming what happens inside video or audio.
+- Use `inspect_media` before making content-based cuts or claiming what happens inside video or audio. For video, visually review the returned contact-sheet image; do not rely only on the text analysis. The first sheet is returned as native MCP image content, while resource links and structured data preserve access to the complete inspection result.
 - When exact dialogue matters, inspect the finished video and compare its timestamped transcript with the user's script before calling it approved. If a line is wrong, identify the smallest replacement passage or shot.
 - Use `upload_media` only when a local file or public URL must become a Cospark media source.
 

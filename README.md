@@ -14,7 +14,7 @@ MCP server: `https://api.cospark.so/api/mcp/cospark`
 - `get_ugc_video_status` — poll a talking-head run until its reviewed final video is ready.
 - `list_voices` — list available voice IDs and their characteristics.
 - `generate_voiceover` — create narrated audio with duration and timestamped segments.
-- `inspect_media` — inspect video or audio and return timing, transcript, scene, and contact-sheet information.
+- `inspect_media` — inspect video or audio and return timing, transcript, scene analysis, and a viewable contact-sheet image.
 - `upload_media` — import a public URL or prepare a signed upload for a local media file.
 - `list_projects` — list existing projects that can contain a workspace.
 - `create_workspace` — create an editable workspace and return its session ID and chat URL.
@@ -44,7 +44,7 @@ Codex opens the Cospark sign-in flow and stores the resulting OAuth credentials 
 
 ## Install the plugin from GitHub
 
-The plugin adds workflow guidance for media generation, voice selection, inspection, uploads, workspace discovery, and simple timeline editing.
+The plugin includes three skills: `cospark` for generation, inspection, uploads, voice selection, and timeline editing; `gemini-omni-ugc` for individual talking-head clips and product handling; and `seedance-video` for reference-driven shots and choreography.
 
 ```sh
 codex plugin marketplace add corift/cospark-ai --ref main
@@ -75,6 +75,18 @@ Public media URLs can be used directly. Local files use a two-step signed upload
 
 Local files can be images, videos, or audio up to 100 MB.
 
+## Media inspection
+
+`inspect_media` returns its first contact sheet as native MCP image content at the generated resolution, so multimodal MCP clients such as Codex can view the frames directly. It also preserves contact-sheet resource links and structured inspection data for clients that need URLs or access to additional sheets. If the image cannot be embedded, the resource links remain available.
+
 ## License
 
 The distribution package in this repository is licensed under the MIT License. The Cospark service and API remain subject to the [Cospark Terms of Service](https://cospark.so/terms).
+
+## Maintaining skills
+
+Maintain all three skills under `plugins/cospark/skills/`, including their reference files. This repository is the source of truth. Do not edit installed copies under `~/.codex/plugins/cache/` or keep standalone duplicates under `~/.codex/skills/`.
+
+After editing, validate the skills and plugin, update the plugin version, commit, and push to `main`. Refresh the Git marketplace with `codex plugin marketplace upgrade cospark`, reinstall with `codex plugin add cospark@cospark`, and start a new task to load the updated skills.
+
+The OpenAI submission is a separate release. Upload a fresh skill bundle in the portal for each skill update; pushing to GitHub does not update its published snapshot. Include each skill's `SKILL.md`, `references/`, and `agents/` files in the bundle.

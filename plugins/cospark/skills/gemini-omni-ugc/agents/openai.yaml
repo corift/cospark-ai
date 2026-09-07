@@ -1,0 +1,11 @@
+interface:
+  display_name: "Gemini Omni UGC"
+  short_description: "Direct natural UGC clips with Gemini Omni"
+  default_prompt: "Use $gemini-omni-ugc to create a short video with Cospark from my references and direction."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "cospark"
+      description: "Cospark video generation, media uploads, and inspection"
+      transport: "streamable_http"
+      url: "https://api.cospark.so/api/mcp/cospark"
