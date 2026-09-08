@@ -1,6 +1,6 @@
 ---
 name: cospark
-description: Create end-to-end AI video ads with Cospark, including UGC hooks and bodies, product shots, voiceovers, media review, and editable timelines. Use when a user asks ChatGPT or Codex to generate, inspect, refine, or assemble ad media with Cospark; do not use for copy or ad strategy alone when no media action is requested.
+description: Research ad references and create end-to-end AI video ads with Cospark, including UGC hooks and bodies, product shots, voiceovers, media review, and editable timelines. Use when a user asks ChatGPT or Codex to find reference ads or generate, inspect, refine, or assemble ad media with Cospark; do not use for copy or ad strategy alone when no reference or media action is requested.
 ---
 
 # Cospark
@@ -22,6 +22,9 @@ Use the Cospark MCP tools to turn scripts and product media into finished, edita
 - Use `inspect_media` before making content-based cuts or claiming what happens inside video or audio. For video, visually review the returned contact-sheet image; do not rely only on the text analysis. The first sheet is returned as native MCP image content, while resource links and structured data preserve access to the complete inspection result.
 - When exact dialogue matters, inspect the finished video and compare its timestamped transcript with the user's script before calling it approved. If a line is wrong, identify the smallest replacement passage or shot.
 - Use `upload_media` only when a local file or public URL must become a Cospark media source.
+- Use `search_ads` for public creative references. Set `format: "image"` for static ads or `format: "video"` when the user wants video examples. Image queries rank by visual similarity; video queries search indexed transcripts, scene descriptions, on-screen text, and creative metadata.
+- For video search results, return the supplied `videoUrl` and visually review the native contact-sheet image before selecting or describing a reference. `contactSheetUrls` preserve access to every sheet in chronological order. Call `inspect_media` with the video URL when the task needs fuller scene, dialogue, or timing analysis.
+- Use `list_ad_brands` to discover the library's advertiser names before a brand-filtered search. Use `get_ad` for the full record of an image ad returned by `search_ads`.
 
 Use `list_workspaces` to find an existing workspace and its session ID. Use `create_workspace` when a new editable workspace is needed; optionally call `list_projects` first to attach it to an existing project. Project creation is not available through these tools.
 
@@ -50,3 +53,4 @@ Do not expose the signed upload URL as the final result. It is temporary. If the
 - Talking-head UGC generation takes several minutes. Start it once, then poll its status for the reviewed final result.
 - For independent variants, parallel generation is appropriate when the user requested the batch and each run has distinct creative direction. Track every run ID and report failures separately instead of silently replacing them.
 - Return the final durable Cospark media URL and, when useful, its file ID. Do not present temporary upload URLs as generated assets.
+- Ad-library video URLs are short-lived reference links, not generated assets. Use them promptly for review or `inspect_media`; do not describe them as durable user-owned output.

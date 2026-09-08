@@ -6,6 +6,6 @@ dependencies:
   tools:
     - type: "mcp"
       value: "cospark"
-      description: "Cospark AI video ad generation, inspection, voice, and editable timeline tools"
+      description: "Cospark ad reference search, AI video generation, inspection, voice, and editable timeline tools"
       transport: "streamable_http"
       url: "https://api.cospark.so/api/mcp/cospark"

@@ -1,7 +1,7 @@
 {
   "name": "cospark",
-  "version": "0.3.2+codex.20260907061554",
-  "description": "Create end-to-end AI video ads from ChatGPT, Codex, and other agents with Cospark.",
+  "version": "0.3.2+codex.20260908060953",
+  "description": "Research references and create end-to-end AI video ads from ChatGPT, Codex, and other agents with Cospark.",
   "author": {
     "name": "Cospark",
     "url": "https://cospark.so"
@@ -21,7 +21,7 @@
   "interface": {
     "displayName": "Cospark",
     "shortDescription": "Create end-to-end AI video ads from chat.",
-    "longDescription": "Turn scripts and product media into UGC hooks, talking-head ad bodies, product shots, voiceovers, and editable timelines. Inspect exact dialogue and refine individual shots without leaving ChatGPT or Codex.",
+    "longDescription": "Search public image and video ad references, then turn scripts and product media into UGC hooks, talking-head ad bodies, product shots, voiceovers, and editable timelines. Inspect exact dialogue and refine individual shots without leaving ChatGPT or Codex.",
     "developerName": "Cospark",
     "category": "Productivity",
     "capabilities": [
@@ -35,6 +35,7 @@
       "Create a UGC ad from my reference images and script.",
       "Generate three short hook variants from this exact starting frame and keep the character consistent.",
       "Inspect this finished ad and identify any spoken line that differs from my script.",
+      "Find five video ad references for my category and compare their hooks from the contact sheets.",
       "Replace only the flawed section of this UGC ad without regenerating the full video.",
       "Assemble these hooks, body clips, and voiceover into an editable ad timeline."
     ],

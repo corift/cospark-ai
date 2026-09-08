@@ -1,6 +1,6 @@
 # Cospark
 
-Generate and edit images, videos, UGC, and voiceovers from AI agents through Cospark's authenticated remote MCP server.
+Research ad references and generate or edit images, videos, UGC, and voiceovers from AI agents through Cospark's authenticated remote MCP server.
 
 MCP server: `https://api.cospark.so/api/mcp/cospark`
 
@@ -16,6 +16,9 @@ MCP server: `https://api.cospark.so/api/mcp/cospark`
 - `generate_voiceover` — create narrated audio with duration and timestamped segments.
 - `inspect_media` — inspect video or audio and return timing, transcript, scene analysis, and a viewable contact-sheet image.
 - `upload_media` — import a public URL or prepare a signed upload for a local media file.
+- `search_ads` — search public image or indexed video ads; video results include playable URLs and contact-sheet previews.
+- `get_ad` — retrieve the full record for an image ad returned by `search_ads`.
+- `list_ad_brands` — discover advertiser names before filtering ad search by brand.
 - `list_projects` — list existing projects that can contain a workspace.
 - `create_workspace` — create an editable workspace and return its session ID and chat URL.
 - `list_workspaces` — list recent workspaces in cursor-paginated pages of up to 10.
@@ -78,6 +81,12 @@ Local files can be images, videos, or audio up to 100 MB.
 ## Media inspection
 
 `inspect_media` returns its first contact sheet as native MCP image content at the generated resolution, so multimodal MCP clients such as Codex can view the frames directly. It also preserves contact-sheet resource links and structured inspection data for clients that need URLs or access to additional sheets. If the image cannot be embedded, the resource links remain available.
+
+## Ad reference search
+
+Use `search_ads` with `format: "image"` for static creative references or `format: "video"` for indexed video ads. Image queries use visual similarity; video queries search indexed transcripts, scene descriptions, on-screen text, and creative metadata. Video results include short-lived playable `videoUrl` values, chronological `contactSheetUrls`, resource links, and the first contact sheet as native high-detail MCP image content. The links are signed without exposing the private video-library credential.
+
+Review the inline contact sheet before choosing a video reference. Call `inspect_media` with its `videoUrl` when a decision needs fuller scene, dialogue, or timing analysis.
 
 ## License
 
