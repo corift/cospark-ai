@@ -11,7 +11,7 @@ Read [references/examples.md](references/examples.md) whenever composing a new G
 
 ## Use with Cospark
 
-Use Cospark's `generate_video_from_frames` for an exact starting frame, `generate_video_with_references` for guiding references, and `generate_video` for text-only shots when the requested model supports them. Read the connected tool schema for supported model identifiers, inputs, and durations; display names in this guide are not API identifiers. Use `upload_media` for local inputs and `inspect_media` to review completed clips. A complete multi-shot talking-head script belongs in `generate_ugc_video`.
+Use Cospark's `generate_video_from_frames` for an exact starting frame, `generate_video_with_references` for guiding references, and `generate_video` for text-only shots when the requested model supports them. Read the connected tool schema for supported model identifiers, inputs, and durations; display names in this guide are not API identifiers. Use `upload_media` for local inputs and `inspect_media` to review completed clips. A complete multi-shot talking-head script belongs in `generate_ugc_video` with `model: "gemini-omni"`, the full script in `prompt`, and the character image in `refImage`. Set the model explicitly: omitting it uses the service's MiniMax default.
 
 ## Choose the workflow
 

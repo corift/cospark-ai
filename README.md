@@ -96,6 +96,8 @@ The distribution package in this repository is licensed under the MIT License. T
 
 Maintain all three skills under `plugins/cospark/skills/`, including their reference files. This repository is the source of truth. Do not edit installed copies under `~/.codex/plugins/cache/` or keep standalone duplicates under `~/.codex/skills/`.
 
+The installed plugin is a distribution copy of these sources. If an installed copy contains useful changes, reconcile them into this repository before refreshing the plugin so they are not lost. Keep complementary personal skills such as ad research, copywriting, and cataloging in their own source locations; they are separate capabilities, not additional copies of the three plugin skills.
+
 After editing, validate the skills and plugin, update the plugin version, commit, and push to `main`. Refresh the Git marketplace with `codex plugin marketplace upgrade cospark`, reinstall with `codex plugin add cospark@cospark`, and start a new task to load the updated skills.
 
 The OpenAI submission is a separate release. Upload a fresh skill bundle in the portal for each skill update; pushing to GitHub does not update its published snapshot. Include each skill's `SKILL.md`, `references/`, and `agents/` files in the bundle.
