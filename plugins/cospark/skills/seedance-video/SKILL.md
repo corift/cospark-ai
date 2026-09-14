@@ -9,6 +9,8 @@ Write the prompt like clear direction for someone filming the scene. Establish t
 
 For a useful starting point, read the relevant pattern in [references/examples.md](references/examples.md): a product reaction, a beach interaction, separate identity and motion references, or a Seedance 2.5 documentary sequence. Adapt the pattern to the request.
 
+For B-roll montages, use [Timed B-roll shot prompts](../cospark/references/broll-shot-prompts.md): overall filming style, then timed shots with concrete composition, movement, continuity and explicit hard cuts. This structure is shared with Gemini; execution settings remain model-specific.
+
 ## Choose the generation
 
 With Cospark, use `generate_video` for text, `generate_video_from_frames` for an exact starting frame, and `generate_video_with_references` for guiding media. Use `upload_media` for local inputs and `inspect_media` to review outputs. A complete talking-head script needing automatic planning and assembly belongs in the Cospark skill's `generate_ugc_video` workflow; preserve an explicitly requested Seedance model rather than silently switching workflows or models.
@@ -34,6 +36,8 @@ When dialogue matters, quote each line once, name the speaker, and keep acting d
 
 ## Keep the scene coherent
 
+When preparing realistic UGC character or shot references, follow [Creating realistic characters and shots](../cospark/references/creating-a-realistic-character.md). Start from a real photo or exact video frame; change the face, clothing, and colors as requested while preserving the shot. For reference-based B-roll and product demos, existing media can be useful even when its product differs; adapt the product and necessary action through the prompt. Text-only montage requests can proceed without preparing reference images when invented scenes fit the brief.
+
 Inspect supplied references before using them. Explain what each contributes when there could be ambiguity. One image can supply the person, setting, and opening composition together. If a video supplies only movement, say which subject should perform it and which parts of the video to leave out. Use reference labels such as `@Image 1` only when the tool supports them.
 
 State what stays consistent: the person's appearance, clothing, important objects, and where people and objects start. Distinguish multiple people by clear visual traits and roles. Specify an object's holder or final location when it matters to the action.
@@ -48,4 +52,4 @@ State what should stay true in plain language, such as "George stays seated thro
 
 Read the prompt once for conflicting directions, overcrowded timing, and unexplained changes between shots. Check it against the user's references and exact dialogue.
 
-Use the supplied media and preserve the user's chosen identity, clothing, setting, and composition. Ask before materially changing them. Start only the requested generations; do not retry a failed job if another attempt may incur cost without approval. Inspect completed media before claiming it followed the prompt when an inspection tool is available.
+Use the supplied media and preserve the user's chosen identity, clothing, setting, and composition, including any appearance changes already requested. Ask only before materially changing them beyond that scope. Start only the requested generations; do not retry a failed job if another attempt may incur cost without approval. Inspect completed media before claiming it followed the prompt when an inspection tool is available.
