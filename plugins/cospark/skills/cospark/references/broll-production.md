@@ -1,6 +1,6 @@
 # B-roll production
 
-Shared guidance for Gemini and Seedance B-roll, product inserts, and native montages: framing, visible action, source timing, assembly, and review. Apply the selected model skill and current tool schema for execution settings. The Gemini examples and observations below retain their original scope; they are not evidence of identical Seedance behavior.
+Shared guidance for Gemini and Seedance B-roll, product inserts, and native montages: framing, visible action, source timing, assembly, and review. Apply the selected model guide and current tool schema for execution settings. The Gemini examples and observations below retain their original scope; they are not evidence of identical Seedance behavior.
 
 For montages, start with [Timed B-roll shot prompts](broll-shot-prompts.md), the shared Seedance/Gemini structure endorsed after the seven-shot food test. The single-shot example below serves continuous coverage; it should not replace a requested montage.
 

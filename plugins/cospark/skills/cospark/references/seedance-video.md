@@ -1,19 +1,14 @@
----
-name: seedance-video
-description: Write and execute Seedance video prompts from text or media references. Use for individual clips or multi-shot sequences, including UGC, product shots, everyday footage, and timed action. Keeps Seedance prompting separate from Gemini Omni.
----
-
 # Seedance Video
 
 Write the prompt like clear direction for someone filming the scene. Establish the subject, setting, and camera style, then describe what happens in order. Use concrete actions and ordinary language. Add detail where it helps the model make a specific choice.
 
-For a useful starting point, read the relevant pattern in [references/examples.md](references/examples.md): a product reaction, a beach interaction, separate identity and motion references, or a Seedance 2.5 documentary sequence. Adapt the pattern to the request.
+For a useful starting point, read the relevant pattern in [references/examples.md](seedance-examples.md): a product reaction, a beach interaction, separate identity and motion references, or a Seedance 2.5 documentary sequence. Adapt the pattern to the request.
 
-For B-roll framing, physical action, and review, read the shared [B-roll production guide](../cospark/references/broll-production.md). For B-roll montages, use [Timed B-roll shot prompts](../cospark/references/broll-shot-prompts.md): overall filming style, then timed shots with concrete composition, movement, continuity and explicit hard cuts. This structure is shared with Gemini; execution settings remain model-specific.
+For B-roll framing, physical action, and review, read the shared [B-roll production guide](broll-production.md). For B-roll montages, use [Timed B-roll shot prompts](broll-shot-prompts.md): overall filming style, then timed shots with concrete composition, movement, continuity and explicit hard cuts. This structure is shared with Gemini; execution settings remain model-specific.
 
 ## Choose the generation
 
-With Cospark, use `generate_video` for text, `generate_video_from_frames` for an exact starting frame, and `generate_video_with_references` for guiding media. Use `upload_media` for local inputs and `inspect_media` to review outputs. A complete talking-head script needing automatic planning and assembly belongs in the Cospark skill's `generate_ugc_video` workflow; preserve an explicitly requested Seedance model rather than silently switching workflows or models.
+With Cospark, use `generate_video` for text, `generate_video_from_frames` for an exact starting frame, and `generate_video_with_references` for guiding media. Use `upload_media` for local inputs and `inspect_media` to review outputs. A complete talking-head script needing automatic planning and assembly belongs in [Cospark’s `generate_ugc_video` workflow](cospark-tools.md); preserve an explicitly requested Seedance model rather than silently switching workflows or models.
 
 Honor the user's Seedance version. Otherwise, choose the newest Seedance version exposed by the tool that supports the requested inputs and duration, and state the choice. Check the tool schema for model IDs, reference syntax, durations, resolution, and audio support. A capability described in an example may not be available through the selected tool.
 
@@ -36,7 +31,7 @@ When dialogue matters, quote each line once, name the speaker, and keep acting d
 
 ## Keep the scene coherent
 
-When preparing realistic UGC character or shot references, follow [Creating realistic characters and shots](../cospark/references/creating-a-realistic-character.md). Start from a real photo or exact video frame; change the face, clothing, and colors as requested while preserving the shot. For reference-based B-roll and product demos, existing media can be useful even when its product differs; adapt the product and necessary action through the prompt. Text-only montage requests can proceed without preparing reference images when invented scenes fit the brief.
+When preparing realistic UGC character or shot references, follow [Creating realistic characters and shots](creating-a-realistic-character.md). Start from a real photo or exact video frame; change the face, clothing, and colors as requested while preserving the shot. For reference-based B-roll and product demos, existing media can be useful even when its product differs; adapt the product and necessary action through the prompt. Text-only montage requests can proceed without preparing reference images when invented scenes fit the brief.
 
 Inspect supplied references before using them. Explain what each contributes when there could be ambiguity. One image can supply the person, setting, and opening composition together. If a video supplies only movement, say which subject should perform it and which parts of the video to leave out. Use reference labels such as `@Image 1` only when the tool supports them.
 

@@ -1,10 +1,10 @@
 # Gemini Omni talking-head clips
 
-Use for direct-to-camera dialogue, natural gestures, and spoken product handling. Read [prompt examples](examples.md) when composing a talking-head prompt.
+Use for direct-to-camera dialogue, natural gestures, and spoken product handling. Read [prompt examples](gemini-examples.md) when composing a talking-head prompt.
 
 ## Prepare the start frame
 
-When sourcing or remaking A-roll, B-roll, or product-shot references, follow [Creating realistic characters and shots](../../cospark/references/creating-a-realistic-character.md): use a real photo or exact video frame, change the face, clothing, and colors as requested, and preserve the rest of the shot. For B-roll and product demos, use existing media even when its product differs; adapt the product and necessary action through the prompt.
+When sourcing or remaking A-roll, B-roll, or product-shot references, follow [Creating realistic characters and shots](creating-a-realistic-character.md): use a real photo or exact video frame, change the face, clothing, and colors as requested, and preserve the rest of the shot. For B-roll and product demos, use existing media even when its product differs; adapt the product and necessary action through the prompt.
 
 The source image strongly controls the result. For talking-head shots, prefer a clean 9:16 frame with:
 
