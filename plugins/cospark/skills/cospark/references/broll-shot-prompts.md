@@ -1,6 +1,6 @@
 # Timed B-roll shot prompts
 
-Use this structure for Gemini Omni and Seedance B-roll montages. Keep model selection, supported duration, resolution, and reference inputs in the relevant model skill and current tool schema.
+Use this structure for Gemini Omni and Seedance B-roll montages. Keep model selection, supported duration, resolution, and reference inputs in the relevant model guide and current tool schema.
 
 ## Prompt structure
 

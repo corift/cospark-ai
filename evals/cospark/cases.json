@@ -1,0 +1,75 @@
+[
+  {
+    "id": "gemini-dialogue",
+    "request": "Write a Gemini Omni prompt for an 8-second vertical talking-head clip. The supplied starting frame shows a woman seated at a kitchen table, both hands empty and visible. Exact line: I used to dread planning dinner. Now I pick my meals in minutes. One natural hand gesture. Prompt only.",
+    "criteria": [
+      "Preserve exact dialogue and 8-second portrait brief.",
+      "Describe one gesture, with separate speech and action directions.",
+      "Return a prompt without requiring a full ad plan or tool execution."
+    ]
+  },
+  {
+    "id": "seedance-montage",
+    "request": "Write a text-only Seedance prompt for a 7-second vertical food B-roll montage with four shots: breakfast plate, smoothie pour, fish tacos, and pasta. Casual phone footage, hard cuts, no speech. No reference images. Just give me the prompt.",
+    "criteria": [
+      "Four requested shots and three hard cuts fit seven seconds.",
+      "Honor text-only inputs; do not require images.",
+      "No dialogue template, invented speech, or Gemini model substitution."
+    ]
+  },
+  {
+    "id": "research-plan",
+    "request": "We have a meal-planning app: save recipes, plan a week, and build a shopping list. Before we make any videos, give me a reference-ad research plan and three concept directions. We have no customer testimonials or campaign results yet. Do not browse or generate media in this step.",
+    "criteria": [
+      "Provide a research plan and three distinct concepts.",
+      "No fabricated references, testimonials, or campaign performance.",
+      "Do not turn planning into generation or claim research already happened."
+    ]
+  },
+  {
+    "id": "coding-negative",
+    "request": "Fix this TypeScript: const total: number = \"3\";",
+    "criteria": [
+      "Do not activate Cospark or read its files.",
+      "Return a valid number assignment."
+    ]
+  },
+  {
+    "id": "copy-negative",
+    "request": "Fix the spelling in this sentence: Our app makes meal planing easy.",
+    "criteria": [
+      "Do not activate Cospark or read its files.",
+      "Correct planning without expanding into ad research."
+    ]
+  },
+  {
+    "id": "missing-product",
+    "request": "Make my product into an ad.",
+    "context": "No prior product context or attachment.",
+    "criteria": [
+      "Ask for product identity or URL.",
+      "Do not invent product details or launch production.",
+      "Avoid demanding a complete brief before learning what the product is."
+    ]
+  },
+  {
+    "id": "pending-run",
+    "request": "Using Cospark, my UGC run abc123 is still pending after several minutes. What should we do next?",
+    "criteria": [
+      "Propose polling the original run abc123.",
+      "Do not propose a replacement paid generation.",
+      "Do not claim completion without a status result."
+    ]
+  },
+  {
+    "id": "full-ad",
+    "request": "Create a complete vertical ad in Cospark from my supplied presenter image and this exact script: Every Sunday I used to spend an hour deciding what to cook. I would save recipes everywhere, forget what I had, and still make another trip to the store. Now I save my recipes in one place, choose the meals I want, and build my shopping list from that plan. Dinner feels a lot less chaotic. Try planning your next week with us. Include separate food B-roll over the narration and return to the presenter at the end. Use Gemini for the presenter and Seedance for B-roll. You may generate and assemble the ad.",
+    "context": "Assume presenter asset exists. Dry run only: describe intended tool sequence without external execution.",
+    "criteria": [
+      "Use full-script UGC orchestration with explicit Gemini selection.",
+      "Keep supporting footage on Seedance.",
+      "Poll original run IDs and base edit timing on actual narration.",
+      "Do not fabricate completed media or add a new approval gate to authorized production."
+    ]
+  }
+]

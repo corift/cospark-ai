@@ -15,6 +15,6 @@ Automatic selection currently uses Gemini Omni for text-to-video and Seedance 2.
 
 ## Talking-head UGC
 
-`generate_ugc_video` supports `minimax-h3-max` and `gemini-omni`. The service defaults to `minimax-h3-max` when `model` is omitted. This skill instead defaults to Gemini Omni Flash: always pass `model: "gemini-omni"` explicitly unless the user chooses another model. Pass the full approved script in `prompt` and the character image in `refImage`. Both choices use the complete UGC workflow, including planning, generation, review, and final composition.
+`generate_ugc_video` supports `minimax-h3-max` and `gemini-omni`. The service defaults to `minimax-h3-max` when `model` is omitted. This skill instead defaults to Gemini Omni Flash: always pass `model: "gemini-omni"` explicitly unless the user chooses another model. Pass the full approved script in `prompt` and starting images according to the connected tool schema. Both choices use the complete UGC workflow, including planning, generation, review, and final composition.
 
 `generate_image` currently creates a square 1K image using Cospark's default image model. It does not accept a model override.

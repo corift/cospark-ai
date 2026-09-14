@@ -1,0 +1,19 @@
+{
+  "SKILL.md": "aed71b777c88c224162d317de5bfd4f72d84495ba9dfe2012484f8610ceb5151",
+  "agents/openai.yaml": "cf447c6a0820bb97cb21d9b4cb823dfb1d28110019e236b86aeba30a866e00d5",
+  "references/broll-production.md": "c38406ae380da454adc2dda2d23ab768878f3008f328052ffa126749171945ad",
+  "references/broll-shot-prompts.md": "da12815dbd6cc8695660ebc525b759a1112c9a1ec98e7b80b7e74cbff3a8b4dc",
+  "references/cospark-tools.md": "9fa749af8dbd41058a662a9df1d8bad6ce7805413575a164aa7fe258e9236afa",
+  "references/creating-a-realistic-character.md": "db4001f26a3c5baea4f97279e87ae5be2762d53945abc7f401af3d6d0d58b142",
+  "references/gemini-examples.md": "4d1762e9e15675622720f632660227ff0293fc68685271a63d8828cc411ac3ec",
+  "references/gemini-talking-head.md": "0dc093f21103755915fd4663b8bc4e850bbaf0b450173b0e54a7c704426d53ae",
+  "references/gemini-video.md": "d64ff1a5c69bfe3c500f6fe86bffe041d8b62cda0b2320811fb1da5ff2d3be93",
+  "references/product-to-ads-workflow.md": "9c792aaae95f987572406e903be37e2f4355562df0a21ce2e8302e5108c73fad",
+  "references/product-to-ads.md": "563be2346bd9432ceebbe9fba7d7e862e4c5351849079373db435db064d5a19a",
+  "references/reference-discovery-and-inspection.md": "91ec7aab7a0bc29d141809b49d3a647f9972cf3dfce688dbad17fbd7c74eb953",
+  "references/seedance-examples.md": "d53e9125f1b9f6ef54207a699903ddba77d106b06fbc27364ef7780b0f95fa57",
+  "references/seedance-video.md": "f1c7566fde6ec1e616ee7ae5965cbd288b1c7e7970a81166390dd2c4d8ba8bb6",
+  "references/ugc-video-structure.md": "7f607bdfb1e2f83ffb3902d16ec6a0d65a7860be5199bcefd4180da8ed008abb",
+  "references/using-a-reference-video.md": "d4f1c86151679f2e639e70488b6948e1108755c5f5eba51f6fecfb4b33eadcc7",
+  "references/video-models.md": "7ea1f9665e1f5230f9df331f31c850b8cb563608d2911aee55c1393f5bf3b974"
+}

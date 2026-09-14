@@ -47,7 +47,7 @@ Codex opens the Cospark sign-in flow and stores the resulting OAuth credentials 
 
 ## Install the plugin from GitHub
 
-The plugin includes four skills: `cospark` for generation, inspection, uploads, voice selection, and timeline editing; `gemini-omni-ugc` for individual talking-head clips and product handling; `seedance-video` for reference-driven shots and choreography; and `product-to-ads` for product research, reference galleries, concepts, and production planning.
+The plugin includes one `cospark` skill. Its `SKILL.md` directs the agent to supporting references for product research, Gemini, Seedance, B-roll, production, and Cospark tools.
 
 ```sh
 codex plugin marketplace add corift/cospark-ai --ref main
@@ -94,9 +94,11 @@ The distribution package in this repository is licensed under the MIT License. T
 
 ## Maintaining skills
 
-Maintain all four skills under `plugins/cospark/skills/`, including their reference files. This repository is the source of truth. Do not edit installed copies under `~/.codex/plugins/cache/` or keep standalone duplicates under `~/.codex/skills/`.
+Behavioral test cases, repeat instructions, and results are in [evals/cospark](evals/cospark/README.md).
 
-The installed plugin is a distribution copy of these sources. If an installed copy contains useful changes, reconcile them into this repository before refreshing the plugin so they are not lost. Keep complementary personal skills such as ad research, copywriting, and cataloging in their own source locations; they are separate capabilities, not additional copies of the four plugin skills.
+Maintain the entrypoint at `plugins/cospark/skills/cospark/SKILL.md` and its supporting files under `references/`. Agent routing instructions belong in that entrypoint; this README documents installation and maintenance. This repository is the source of truth. Do not edit installed copies under `~/.codex/plugins/cache/` or keep standalone duplicates under `~/.codex/skills/`.
+
+The installed plugin is a distribution copy of these sources. If an installed copy contains useful changes, reconcile them into this repository before refreshing the plugin so they are not lost. Keep complementary personal skills such as ad research, copywriting, and cataloging in their own source locations; they are separate capabilities, not additional copies of the plugin skill.
 
 After editing, validate the skills and plugin, update the plugin version, commit, and push to `main`. Refresh the Git marketplace with `codex plugin marketplace upgrade cospark`, reinstall with `codex plugin add cospark@cospark`, and start a new task to load the updated skills. Verify that the installed version matches the source manifest and that its `skills/` files match the committed source. Local edits are not synced until they are committed, pushed, and installed; treat publication and reinstall as one update workflow.
 
