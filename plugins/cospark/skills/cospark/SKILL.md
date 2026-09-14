@@ -5,9 +5,9 @@ description: Research ad references and create end-to-end AI video ads with Cosp
 
 # Cospark
 
-Use the Cospark MCP tools to turn scripts and product media into finished, editable video ads. Preserve the user's exact script and creative direction, and avoid adding unnecessary generation parameters.
+This skill owns Cospark tool execution and shared production guidance. Use the Cospark MCP tools to turn scripts and product media into finished, editable video ads. Preserve the user's exact script and creative direction, and avoid adding unnecessary generation parameters.
 
-## Plan the UGC video
+## Choose the production guidance
 
 For a new product's broader research-to-production workflow, use [Product to ads](../product-to-ads/SKILL.md). It covers the product brief, reference-ad gallery, concepts, production planning and iteration; a focused media request does not require that full workflow.
 
@@ -17,7 +17,7 @@ For a complete creator-led ad with supporting shots, read [UGC video planning an
 
 For finding and evaluating references across ads, TikTok/Reels, and Pinterest, read [Reference discovery and inspection](references/reference-discovery-and-inspection.md). It connects shot-based search, visual review, frame selection, adaptation, and the choice of generation or editing. For an already selected video, use [Using a reference video](references/using-a-reference-video.md).
 
-For Gemini Omni B-roll prompts, read [B-roll prompting](../gemini-omni-ugc/references/broll-prompting.md). Use plain descriptions in explicit time blocks such as `[0-2s]: ...`, match the opening frame to the intended shot scale, and distinguish simply recording a subject from interacting with it.
+For B-roll framing, action, timing, and review, read [B-roll production](references/broll-production.md). For generated montages, use [timed shot prompts](references/broll-shot-prompts.md). Both are shared production guidance. For model-specific prompting, use [Gemini Video](../gemini-video/SKILL.md) or [Seedance Video](../seedance-video/SKILL.md) after choosing the model.
 
 For realistic UGC starting frames, begin with a real photograph or an exact frame from a video. When creating a new character, change the face, clothing, and colors while preserving the source's pose, expression, framing, lighting, background, and objects. Use a supplied source first; otherwise find a suitable real photo, for example on Pinterest. Avoid inventing a polished character portrait from text as the default.
 

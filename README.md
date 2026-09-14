@@ -47,7 +47,7 @@ Codex opens the Cospark sign-in flow and stores the resulting OAuth credentials 
 
 ## Install the plugin from GitHub
 
-The plugin includes four skills: `cospark` for generation, inspection, uploads, voice selection, and timeline editing; `gemini-omni-ugc` for individual talking-head clips and product handling; `seedance-video` for reference-driven shots and choreography; and `product-to-ads` for product research, reference galleries, concepts, and production planning.
+The plugin includes four skills: `cospark` for generation, inspection, uploads, voice selection, and timeline editing; `gemini-video` for Gemini talking-head clips, B-roll, product shots, and montages; `seedance-video` for reference-driven shots and choreography; and `product-to-ads` for product research, reference galleries, concepts, and production planning.
 
 ```sh
 codex plugin marketplace add corift/cospark-ai --ref main
@@ -91,6 +91,17 @@ Review the inline contact sheet before choosing a video reference. Call `inspect
 ## License
 
 The distribution package in this repository is licensed under the MIT License. The Cospark service and API remain subject to the [Cospark Terms of Service](https://cospark.so/terms).
+
+## Skill ownership
+
+| Skill | Owns |
+| --- | --- |
+| `product-to-ads` | Product research, reference galleries, concepts, and the production plan. |
+| `cospark` | Tool execution and shared production references: sourcing, frames, B-roll, UGC structure, and editing. |
+| `gemini-video` | Gemini execution choices and talking-head prompting; routes B-roll to shared guidance. |
+| `seedance-video` | Seedance execution choices and prompting; routes B-roll to the same shared guidance. |
+
+B-roll is a shot type supported by both video models. Keep its general production guidance in Cospark references, and put model-specific prompt formats and observed limitations beside their model skill. Add a separate discoverable skill only when it represents a distinct task worth selecting independently.
 
 ## Maintaining skills
 

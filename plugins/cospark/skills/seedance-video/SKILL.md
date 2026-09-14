@@ -9,7 +9,7 @@ Write the prompt like clear direction for someone filming the scene. Establish t
 
 For a useful starting point, read the relevant pattern in [references/examples.md](references/examples.md): a product reaction, a beach interaction, separate identity and motion references, or a Seedance 2.5 documentary sequence. Adapt the pattern to the request.
 
-For B-roll montages, use [Timed B-roll shot prompts](../cospark/references/broll-shot-prompts.md): overall filming style, then timed shots with concrete composition, movement, continuity and explicit hard cuts. This structure is shared with Gemini; execution settings remain model-specific.
+For B-roll framing, physical action, and review, read the shared [B-roll production guide](../cospark/references/broll-production.md). For B-roll montages, use [Timed B-roll shot prompts](../cospark/references/broll-shot-prompts.md): overall filming style, then timed shots with concrete composition, movement, continuity and explicit hard cuts. This structure is shared with Gemini; execution settings remain model-specific.
 
 ## Choose the generation
 

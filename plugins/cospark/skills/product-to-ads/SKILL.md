@@ -18,7 +18,7 @@ For a new-product research request, the usual deliverable is a browsable referen
 - Research ads and inspect references with [Cospark](../cospark/SKILL.md) and [reference discovery](../cospark/references/reference-discovery-and-inspection.md).
 - Plan a complete creator-led ad with [UGC video structure](../cospark/references/ugc-video-structure.md).
 - Prepare controlled visual references with [realistic characters and shots](../cospark/references/creating-a-realistic-character.md).
-- Generate clips with [Seedance](../seedance-video/SKILL.md) or [Gemini Omni](../gemini-omni-ugc/SKILL.md), following their current tools and supported inputs.
+- Generate clips with [Seedance](../seedance-video/SKILL.md) or [Gemini Omni](../gemini-video/SKILL.md), following their current tools and supported inputs.
 - Use [timed B-roll shot prompts](../cospark/references/broll-shot-prompts.md) for native montages. Use FFmpeg or an available video editor for assembly when appropriate.
 
 Keep provider schemas, polling, generation settings and detailed prompting in those skills. Use an available copywriting skill for deeper buyer research or script craft when needed; this workflow does not require an external skill installation.
