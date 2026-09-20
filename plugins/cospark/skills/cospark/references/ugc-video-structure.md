@@ -28,7 +28,7 @@ Give each planned insert one clear job: the phrase it supports, the action or de
 
 When video production is authorized and the presenter setup is new, generate one short spoken test from the chosen creator frame using `generate_video_from_frames`. Use an actual line from the script, the requested video model, and a supported duration. Reuse a successful existing test instead of charging for the same check again.
 
-Watch and listen for a believable face, natural gestures and blinks, clear speech, useful pace, and lighting that still matches the frame. Keep the direction simple: camera behavior, delivery, exact dialogue, and only the constraints the shot needs. Do not add filler words to force pacing or substitute a numeric WPM instruction for listening to the result.
+Watch and listen for a believable face, natural gestures and blinks, clear speech, useful pace, and lighting that still matches the frame. Follow the [simple clip prompt guide](gemini-talking-head.md): scene and delivery, quoted dialogue, and short fixed rules. If pacing drags, use that guide to distinguish an empty ending from stretched speech and choose a trim or an authorized disposable-dialogue test. Keep the delivered script exact.
 
 If the test needs work, identify whether the frame, performance direction, dialogue length, or edit is responsible. Follow the existing authorization and retry rules. Once it works, keep the chosen frame and delivery direction for the full script. This test is a production step, not a new mandatory user-approval stage. A research, prompt-only, or image-only request does not authorize it.
 

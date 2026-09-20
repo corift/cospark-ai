@@ -1,4 +1,6 @@
-# Gemini Omni Flash UGC prompt examples
+# Archived: Gemini Omni timed prompt examples
+
+These examples accompany the [archived timed-action guide](gemini-talking-head.md). Do not load them for ordinary clip generation. Use the [active simple prompt guide](../gemini-talking-head.md) unless the user explicitly requests the former approach.
 
 Adapt each example to the user's exact start frame, dialogue, voice, products, and requested action. Do not copy people, brands, props, or settings that are absent from the input.
 

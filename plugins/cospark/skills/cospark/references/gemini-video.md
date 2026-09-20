@@ -4,7 +4,7 @@ Direct individual clips and requested montages with Gemini Omni Flash. Choose th
 
 ## Choose the prompting guidance
 
-- **Talking-head dialogue or spoken product handling:** read [talking-head prompting](gemini-talking-head.md) and its examples. Keep dialogue and actions separate and anchor gestures to spoken phrases.
+- **Talking-head dialogue or spoken product handling:** read [Generate realistic UGC clips](gemini-talking-head.md). Use scene and delivery, quoted dialogue, and short fixed rules. Let gestures happen naturally; describe a specific action only when the brief needs it.
 - **B-roll, silent product shots, or inserts:** read [B-roll production](broll-production.md). Use plain timed visual descriptions without invented dialogue or talking-head field labels.
 - **A generated montage:** read [timed B-roll shot prompts](broll-shot-prompts.md). Name the cuts explicitly and remove conflicting continuous-shot restrictions.
 - **A complete ad with supporting footage:** use [UGC video structure](ugc-video-structure.md) to plan coverage and assembly. Keep clip prompting here.
@@ -19,10 +19,10 @@ For a controlled opening, prefer a strong starting image and `generate_video_fro
 
 A complete multi-shot talking-head script belongs in [Cospark's full UGC workflow](cospark-tools.md). Pass `model: "gemini-omni"` explicitly, the full script in `prompt`, and starting images according to the connected schema. Omitting the model uses the service's MiniMax default. Do not manually split a full script into independent clip jobs by default.
 
-Before executing tools, read [Cospark tools](cospark-tools.md) for uploads, polling, charged retries, and media inspection. For a prompt-only request, return the prompt. For authorized generation, send the completed raw prompt without a second creative rewrite. Default to 9:16 and 8 seconds only for a portrait talking-head test; choose other shot durations and framing from the brief and supported settings.
+Before executing tools, read [Cospark tools](cospark-tools.md) for uploads, polling, charged retries, and media inspection. For a prompt-only request, return the prompt. For authorized generation, send the completed raw prompt without a second creative rewrite. Use portrait framing for a portrait talking-head test. Choose duration from the dialogue, intended delivery, and supported settings; honor the user's requested length.
 
 ## Review the shot
 
-Check that the opening supports the action, named hands and objects stay coherent, and timed beats fit the source duration. For speech, preserve and verify the exact line; for silent B-roll, do not introduce dialogue. A single take and a montage need different cut constraints.
+Check that the opening supports the action and hands and objects stay coherent. For speech, preserve and verify the intended line; for silent B-roll, do not introduce dialogue. A single take and a montage need different cut constraints.
 
 Inspect the finished media before claiming that dialogue, gestures, action, or cuts match. Requested timestamps express intent; measure the actual output before choosing edit ranges. Keep final assembly timings separate from source-clip timings.

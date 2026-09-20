@@ -4,7 +4,7 @@
     "request": "Write a Gemini Omni prompt for an 8-second vertical talking-head clip. The supplied starting frame shows a woman seated at a kitchen table, both hands empty and visible. Exact line: I used to dread planning dinner. Now I pick my meals in minutes. One natural hand gesture. Prompt only.",
     "criteria": [
       "Preserve exact dialogue and 8-second portrait brief.",
-      "Describe one gesture, with separate speech and action directions.",
+      "Use scene/delivery, quoted dialogue, and short fixed rules; allow one natural gesture without imposing timed choreography.",
       "Return a prompt without requiring a full ad plan or tool execution."
     ]
   },

@@ -1,0 +1,40 @@
+[
+  {
+    "id": "simple-talking-head-default",
+    "request": "Write a six-second Omni 1.1 Flash prompt from my supplied creator frame. Exact line: It's already six, everyone's hungry, and I'm scrolling through saved recipes trying to figure out dinner. Energetic and conversational. Prompt only.",
+    "criteria": [
+      "Use scene and delivery, exact quoted dialogue, and short fixed rules.",
+      "Let gestures happen naturally without timed Dialogue or Action blocks or a prescribed silent finish.",
+      "Do not load the archived approach, append filler, or generate media."
+    ]
+  },
+  {
+    "id": "trailing-silence",
+    "request": "This take sounds good but has a second and a half of silence after the last word. Tighten the ending and keep the performance.",
+    "context": "Dry run. Existing video and transcript are available; generation is not requested.",
+    "criteria": [
+      "Inspect the final word and pause, then trim the empty ending while preserving complete speech.",
+      "Do not regenerate, add disposable dialogue, or change playback speed automatically."
+    ]
+  },
+  {
+    "id": "disposable-dialogue-test",
+    "request": "The words are stretched to fill this clip. Make one more using the tutorial's filler trick, then remove the filler. Keep my main line unchanged.",
+    "context": "Dry run. Selected creator frame, main line, and model are already available.",
+    "criteria": [
+      "Append a short neutral phrase to the quoted main line and generate only the authorized new take.",
+      "Inspect word boundaries and remove the filler from the delivered clip without cutting the final intended word.",
+      "Keep the original take and distinguish the generated duration from the edited duration."
+    ]
+  },
+  {
+    "id": "explicit-archive-request",
+    "request": "Use the old timed Dialogue plus Action format for this shot. I want the existing bottle raised on the word this. Give me a prompt only.",
+    "context": "A source frame shows one bottle held in the creator's right hand. The approved line is: This is the bottle I take everywhere.",
+    "criteria": [
+      "Read the archived guide because the user explicitly requested it.",
+      "Preserve the exact dialogue and existing object while describing the requested action.",
+      "Do not generate footage or replace the user's chosen format with the default."
+    ]
+  }
+]
