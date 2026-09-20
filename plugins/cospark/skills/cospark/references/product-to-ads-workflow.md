@@ -63,7 +63,7 @@ Prepare the creator with [one edit from the original frame](creating-a-realistic
 
 Choose production methods per shot and honor the user's model choices. Working starting points from the current experiments are:
 
-- Complete creator-led A-roll: Cospark's full UGC workflow with Gemini Omni and a prepared presenter frame, following the execution skill.
+- Reference-led creator A-roll: test a prepared presenter frame, generate individual Gemini Omni dialogue clips, then assemble with B-roll. Use automatic full-script orchestration when explicitly requested.
 - Ad hoc B-roll with several generated shots: Seedance with the shared timed shot-list structure is a useful first option, supported by the approved food montage.
 - A controlled opening or recurring identity: suitable starting frames and references.
 - Readable app interfaces or precise interactions: actual screen recordings when available.

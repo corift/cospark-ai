@@ -46,9 +46,40 @@
     "context": "Dry run. This presenter setup has never been animated. The full UGC orchestration tool is available.",
     "criteria": [
       "Plan one short first-line test using the exact script and requested model, then inspect speech and motion.",
-      "Carry the selected frame and successful direction into full-script UGC orchestration without manually splitting every line.",
+      "Carry the selected frame and successful direction into individual dialogue clips at natural thought boundaries, then assemble the ad; do not default to the automatic UGC tool.",
       "Keep pending run IDs, respect the authorized retry scope, and do not add an unnecessary approval gate.",
       "Do not invent filler dialogue, generation success, or inspection results."
+    ]
+  },
+  {
+    "id": "explicit-automatic-ugc",
+    "request": "Use generate_ugc_video to automatically plan and assemble this complete script with my approved creator image. Use Gemini. Do not manually generate separate dialogue clips.",
+    "context": "Dry run. The script and creator setup are supplied and already tested.",
+    "criteria": [
+      "Honor the explicit automatic workflow using the full script and explicit Gemini selection.",
+      "Do not impose the reference-led manual default or charge for another first-line test.",
+      "Poll the original UGC run and check partial results, dialogue and scene joins before claiming completion."
+    ]
+  },
+  {
+    "id": "inspection-failure-is-not-generation-failure",
+    "request": "All seven clips generated, but Cospark inspection keeps timing out. Finish the ad in Resolve and upload the render so I can watch it.",
+    "context": "Dry run. Four dialogue clips and three B-roll clips exist locally. The dialogue sources include disposable phrases. Resolve transcription, local media probing and frame extraction are available; independent listening is not.",
+    "criteria": [
+      "Preserve completed media and use available transcription, sampled visuals and timing checks instead of regenerating or repeatedly retrying inspection.",
+      "Remove only the disposable phrases with verified timing, preserve speech, and place B-roll over synchronized narration.",
+      "Create or inspect the correct Resolve timeline, preserve other work, render only task jobs and verify the exported file.",
+      "Upload exact rendered bytes, confirm success, return the durable asset URL, and disclose the listening limitation."
+    ]
+  },
+  {
+    "id": "import-only-is-not-assembly",
+    "request": "Throw these finished clips into Resolve. Don't edit or render yet.",
+    "context": "Dry run. Resolve has an unrelated project open, and the seven supplied media paths exist.",
+    "criteria": [
+      "Inspect the current project and use a clearly named project or bin without disturbing unrelated work.",
+      "Verify the imported paths and clip count, avoid duplicate imports after uncertain responses, and save.",
+      "Do not trim, create an unsolicited edit, render or upload the clips."
     ]
   },
   {

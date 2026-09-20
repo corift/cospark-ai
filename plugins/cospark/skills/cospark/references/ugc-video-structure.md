@@ -2,6 +2,18 @@
 
 Use this for a complete creator-led ad with supporting footage. The reusable approach is a continuous spoken story, brief visual examples that clarify it, and a return to the person for the personal takeaway. Adapt it to the brief rather than imposing it on every video.
 
+## Default flow for reference-led UGC
+
+1. Find a useful Instagram or TikTok video through [reference discovery](reference-discovery-and-inspection.md). Look for the situation and filming style, not just the exact product.
+2. Make a distinct fictional creator with [one edit from the original frame](creating-a-realistic-character.md). Keep the source composition and ordinary lighting; put all intended changes in that edit. Start each new attempt from the original, not the previous edit.
+3. Test one spoken clip with the selected creator frame and a [simple prompt](gemini-talking-head.md). Reuse a test the user already likes.
+4. Generate the remaining dialogue as individual clips from that same creator frame. Preserve the successful delivery and camera direction.
+5. Make [reference-led B-roll](broll-production.md), checking the same reel first and using other compatible sources when needed. Each shot gets its own original frame; the selected creator can be a separate identity reference. Use the source to make new footage, not as permission to insert someone else's video.
+6. Finish and inspect all needed clips before assembly. Trim using actual speech timing, place short B-roll over continuous narration, and return to the creator where the ending benefits from eye contact.
+7. Render in the chosen editor, check the export, and upload to Cospark when that is the requested handoff. Retain the editable project and source media.
+
+This is the default for reference-led creator ads, not a requirement for every video. An explicit request for automatic script planning and assembly can use `generate_ugc_video`; an explicit model, editor, prompt-only request, or existing approved workflow takes precedence. Do not route a manual clip request through the automatic tool.
+
 ## Using a reference video
 
 When a supplied or selected video guides the new ad, read [Using a reference video](using-a-reference-video.md). That separate workflow covers source breakdown, what to preserve or adapt, and turning the original shots into a new plan and starting frames. Then use the structure and timing guidance below to complete the requested video.
@@ -34,7 +46,11 @@ If the test needs work, identify whether the frame, performance direction, dialo
 
 ## Create coverage that will cut together
 
-For a talking-head-plus-B-roll ad, pass the complete script, chosen creator frame, and tested direction to the full UGC workflow. Let it handle script splitting; do not manually generate every remaining line as a separate job. Generate supporting shots separately from their prepared frames. Independent coverage can run alongside the A-roll; wait for the actual speech before locking edit times.
+Split the remaining script at natural thought boundaries into clips that fit the selected model's supported duration. Keep the exact intended words, reuse the tested creator frame, and change only the dialogue and any necessary delivery direction. Use `generate_video_from_frames` with explicit `model: "gemini-omni"` for the Gemini route; honor another requested model. Do not reroll the creator or replace a good hook to make the rest of the ad.
+
+Generate supporting shots separately from their prepared frames. Independent coverage may run in parallel when the batch is authorized and the service is working. After a suspected service fix, an authorized single-clip test can check recovery before a larger batch; one failed batch does not establish a permanent ban on parallel work. Follow the run-tracking and retry rules in [Cospark tools](cospark-tools.md).
+
+If a proven pacing setup uses a disposable ending phrase, keep it neutral and remove it in the edit. An eight-second source can become a shorter final shot; neither eight seconds nor a six-second trim is a universal target. Keep all raw takes and finish the required sources before building the final timeline. Import-only and clips-only requests stop at those deliverables.
 
 Give a short B-roll generation one manageable action and enough usable footage to choose its entrance and exit. A three-second generated clip may supply a much shorter insert. Do not ask each insert to tell a complete mini-story, repeat the narration, or change scenes internally unless the brief needs that.
 
@@ -42,7 +58,7 @@ For app demonstrations that depend on readable UI or precise interactions, prefe
 
 ## Let the spoken timing determine the cuts
 
-Inspect the finished A-roll and B-roll with `inspect_media`, including the visual results. Use the transcript to locate the phrase each insert supports, then choose the useful part of that clip. Planned timings are estimates until the actual delivery exists.
+Inspect the finished A-roll and B-roll with `inspect_media`, including the visual results. If inspection fails, use the [local review fallback](cospark-tools.md#when-inspection-is-unavailable) instead of regenerating successful footage. Use the transcript to locate the phrase each insert supports, then choose the useful part of that clip. Planned timings are estimates until the actual delivery exists.
 
 - Let the opening thought establish the speaker when that suits the hook. An effective product-first opening can also be preserved.
 - Place an insert near its spoken cue; entering slightly before the key word can give the viewer time to recognize the shot.
@@ -70,6 +86,10 @@ The transferable choice is the relationship between the phrase and the picture. 
 
 Use the user's chosen editor or a suitable available tool. FFmpeg can handle simple picture inserts over continuous audio; this creative structure does not depend on FFmpeg or Resolve.
 
+For Resolve, inspect the current project before changing it, keep sources in a named bin, and use a named timeline with the actual source frame rate. Use an available video-editing skill for Resolve operations and speech timing; if none is installed, consult the connected editor's API documentation. This skill does not require a particular local skill path. An import request is not a finished edit. For an authorized assembly, preserve source files and a project backup, keep dialogue synchronized, and add B-roll as video-only coverage unless its sound is wanted.
+
 A full UGC result may already contain separately generated scenes, automatic audio trims, and joins. Check the run's scene and trimming metadata, and review the audible boundaries before locking B-roll timing. A complete transcript or an unchanged audio stream in the final edit does not prove that upstream trims preserved natural speech. When a join sounds clipped, compare it with the untrimmed scene if available and retain enough breathing room around the phrase; distinguish trimming damage from generated delivery rather than guessing the cause. If audible review is unavailable, state that limit instead of claiming the joins sound clean.
 
 Save the selected source ranges, timeline placements, and phrase cues with the output. Inspect the assembled result to confirm that the insert timing makes sense, the full spoken thought survives, and the ending finishes cleanly. Contact sheets help review shot selection and sequence; use playback when judging motion or audible joins. Clearly disclose any still used in place of requested animated footage.
+
+Render only the task's export jobs. Verify the output's frame count, dimensions, sound, and frames around cuts; a frame-contiguous timeline does not rule out a rendered flash. Check the final transcript for missing words and disposable phrases, and listen across joins when possible. A transcription discrepancy on a brand name is a review flag, not proof of mispronunciation. Save the project, then use [the upload procedure](cospark-tools.md#handle-media-inputs) for a Cospark delivery. Confirm the upload succeeds before sharing the durable asset URL and playable preview. Do not claim listening or successful inspection when only technical checks were available.

@@ -1,6 +1,6 @@
 # Cospark skill checks
 
-These fixtures test the skill's reference selection and response behavior without generating paid media. They are maintainer tests, not files loaded by the skill. `cases.json` covers the general workflows; `organic-reference-cases.json` covers social discovery, original-frame edits, casting, frame extraction, first-line tests, and product-text preservation.
+These fixtures test the skill's reference selection and response behavior without generating paid media. They are maintainer tests, not files loaded by the skill. `cases.json` covers the general workflows; `organic-reference-cases.json` covers social discovery, original-frame edits, casting, frame extraction, first-line tests, manual versus explicitly automatic production, inspection fallback, import-only scope, and product-text preservation.
 
 `talking-head-cases.json` covers simple prompting, ending trims, disposable-dialogue tests, and explicit requests for the archived timed-action format. Run the relevant fixture files using the procedure below. `results.md` and `candidate-files.json` describe the original evaluation snapshot, not validation of later releases.
 

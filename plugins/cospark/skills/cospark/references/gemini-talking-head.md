@@ -43,7 +43,7 @@ Change the specific thing that failed. Do not keep adding instructions when the 
 
 ## Continue with the same setup
 
-Once the user likes a take, reuse its starting image, camera setup, delivery direction, and fixed rules. Change the dialogue for the next requested passage. For a complete ad, pass the successful direction and full script into the [full UGC workflow](cospark-tools.md).
+Once the user likes a take, reuse its starting image, camera setup, delivery direction, and fixed rules. Change the dialogue for each remaining passage and generate individual clips. Follow [the reference-led UGC flow](ugc-video-structure.md) to finish the sources, trim them, and add B-roll in the chosen editor. Use automatic full-script orchestration when explicitly requested, not as a mandatory handoff after the test.
 
 Use the requested model. Keep prompts, settings, and selected outputs together so the successful approach can be repeated. See [Gemini video](gemini-video.md) for frame inputs and model selection, and [Cospark tools](cospark-tools.md) for execution and inspection.
 

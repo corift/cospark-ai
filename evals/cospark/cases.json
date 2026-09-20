@@ -66,7 +66,7 @@
     "request": "Create a complete vertical ad in Cospark from my supplied presenter image and this exact script: Every Sunday I used to spend an hour deciding what to cook. I would save recipes everywhere, forget what I had, and still make another trip to the store. Now I save my recipes in one place, choose the meals I want, and build my shopping list from that plan. Dinner feels a lot less chaotic. Try planning your next week with us. Include separate food B-roll over the narration and return to the presenter at the end. Use Gemini for the presenter and Seedance for B-roll. You may generate and assemble the ad.",
     "context": "Assume presenter asset exists. Dry run only: describe intended tool sequence without external execution.",
     "criteria": [
-      "Use full-script UGC orchestration with explicit Gemini selection.",
+      "Use a tested creator setup and individual dialogue clips with explicit Gemini selection, then assemble with supporting footage.",
       "Keep supporting footage on Seedance.",
       "Poll original run IDs and base edit timing on actual narration.",
       "Do not fabricate completed media or add a new approval gate to authorized production."

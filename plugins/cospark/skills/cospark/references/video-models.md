@@ -1,6 +1,6 @@
 # Cospark video models
 
-Use automatic selection for standalone video shots unless the user names a model or a workflow needs a specific capability. Full-script talking-head UGC uses the explicit Gemini Omni default below.
+Use automatic selection for standalone video shots unless the user names a model or a workflow needs a specific capability. The reference-led talking-head workflow uses explicit Gemini Omni selection below. Check the connected schema before relying on any listed capability.
 
 | Public model | Duration | Text | Start frame | End frame | References |
 | --- | ---: | --- | --- | --- | --- |
@@ -15,6 +15,8 @@ Automatic selection currently uses Gemini Omni for text-to-video and Seedance 2.
 
 ## Talking-head UGC
 
-`generate_ugc_video` supports `minimax-h3-max` and `gemini-omni`. The service defaults to `minimax-h3-max` when `model` is omitted. This skill instead defaults to Gemini Omni Flash: always pass `model: "gemini-omni"` explicitly unless the user chooses another model. Pass the full approved script in `prompt` and starting images according to the connected tool schema. Both choices use the complete UGC workflow, including planning, generation, review, and final composition.
+For reference-led creator ads, default to individual `generate_video_from_frames` clips with explicit `model: "gemini-omni"`, then assemble them with B-roll. Prefer Omni 1.1 Flash when that version is exposed; check the live schema rather than inventing a version parameter. Preserve another requested model.
 
-`generate_image` currently creates a square 1K image using Cospark's default image model. It does not accept a model override.
+For explicitly requested automatic orchestration, `generate_ugc_video` supports `minimax-h3-max` and `gemini-omni`; its service default is MiniMax when the model is omitted. Pass the chosen model explicitly, with the full script and starting images.
+
+For image edits, see [characters and shots](creating-a-realistic-character.md) and the live `generate_image` schema for Nano Banana Pro/Flash, quality and aspect-ratio options. Do not infer image capabilities from this video-model table.
