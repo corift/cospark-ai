@@ -1,58 +1,71 @@
-# Creating realistic characters and shots
+# Creating a realistic character
 
-For realistic UGC, preserve the photographic evidence of a real shot. The starting frame should feel like a moment from someone's video, including its ordinary lighting, framing, and imperfections.
+Start with a good frame from a real video. Keep the light, camera angle, background, and small imperfections that make it look like someone recorded it on their phone. Replace the person and the details the brief asks to change.
 
-## Choose the source
+## 1. Choose a useful source frame
 
-For searching and shortlisting new material, use [Reference discovery and inspection](reference-discovery-and-inspection.md). The frame-based approach here applies to reference-led production; honor an explicit text-only or no-image generation test without adding media inputs.
+Use a suitable image the user supplied, or follow [Finding reference videos](reference-discovery-and-inspection.md) to find a creator on Instagram or TikTok. Pick the frame for the intended scene: a visible speaking face for talking-head footage, or clear hands and objects for an action shot.
 
-- Use the user's supplied photo or exact video frame when suitable. For a video, inspect it to choose the moment, then obtain that actual single frame at the best available quality.
-- If no suitable source is supplied, find an existing photograph or video with useful framing, action, and lighting, for example on Pinterest or in an ad library. The product or category does not have to match. Inspect the selected image and retain its source link.
-- A contact sheet helps select a shot. Pass the actual selected photo or individual video frame into image editing, rather than recreating it from a written description or using the entire grid as the editing target.
-- Choose a frame that can support the intended action. Talking-only A-roll needs a visible face and a plausible speaking pose; B-roll needs the hands, objects, and action framed appropriately. Preserve a specifically requested opening even when it differs from this preference.
+Look for natural skin texture, facial highlights with detail, a relaxed pose, and a real room with some depth. Avoid blurred hands, awkward expressions, and captions covering important features. Use the individual frame at its original quality, not a contact-sheet crop or a written recreation of the scene. Honor an explicit request for text-only generation without adding a reference.
 
-## Change the character, preserve the shot
+## 2. Say what should change
 
-When the user asks for a new character, the default changes are **face, clothing, and colors**. Make the facial identity distinctly different while retaining the source expression and gaze. Keep the original body pose, hand positions, object grip, proportions, camera angle, camera distance, crop, room, objects, lighting direction, shadows, depth of field, and photographic texture.
+Start with a short prompt. The image already shows the room, light, pose, and framing; you do not need to describe all of them again.
 
-Change outfit and requested colors without rebuilding the scene or replacing its natural lighting with a new color grade. Preserve hairstyle and other details unless included in the requested changes. If the user asks only to remove UI, preserve the original person and clothing too.
+> Keep everything about this image the same, including the lighting, framing, background, pose, and expression. Replace the foreground woman with a clearly different fictional woman in her early 30s, with a similar skin-tone lightness to the source. She must not resemble the source woman. Remove all overlaid text, captions, emojis, watermarks, and interface elements.
 
-Use an image-editing tool with the source image attached; in Codex, use the built-in ImageGen tool. Remove browser chrome and captions when a clean starting frame is needed. Preserve natural softness, uneven light, and incidental background detail. Avoid beauty retouching, idealized symmetry, studio lighting, or a generic polished AI portrait.
+Adjust the person description to the brief. Change clothing, accessories, props, or the background only when wanted. If the user asks for a completely text-free image, add that requirement; otherwise preserve writing that belongs on the actual product or app screen. Removing a social caption does not mean erasing the product UI.
 
-For a character-only edit, preserve the scene. When adapting an ad to a different product, change the product, branding, props, and action as needed for that brief while retaining the source shot's useful visual structure. For multiple shots, use each original shot's exact frame as its composition reference and the chosen new character image as the identity reference.
+When several details need changing, put them in the same prompt:
 
-## Recreate a video with one new person
+> Also change her top to a forest-green T-shirt, add an oatmeal kitchen apron and small asymmetric earrings, and replace the mug with the supplied product.
 
-This sequence worked well for a source-led character recreation:
+Use only the details that help this scene. A plant, necklace, earbud, or microphone is optional. Keep sound capture believable for the shot: close phone framing can work without a visible microphone, while an interview may need one.
 
-1. Map the source shots and select individual frames that cover useful views of the person. Retain source timestamps where available.
-2. Edit one clear face frame to establish the new identity. Keep its original scene and photographic texture; change the face, clothing, and requested colors.
-3. For every additional shot, attach **its own original frame as Image 1** and **the new character frame as Image 2**. Reuse that character reference across the set instead of deriving each identity from the previous edited shot.
-4. State the reference roles explicitly: “Edit Image 1. Image 2 supplies facial identity only. Preserve Image 1's expression, gaze, hairstyle, pose, camera, lighting, and setting.” Describe clothing changes separately for that shot.
-5. Compare each original and edit side by side. Save the selected frames, source mapping, and prompts together so the approach can be repeated.
+## 3. Make each attempt from the original
 
-The source action takes priority over the identity reference's expression: keep an exercise grimace, a downward watch-check gaze, or a face hidden behind a phone. Do not borrow the character reference's loose hairstyle for a source shot with a ponytail. Preserve phone interfaces and other in-scene product details unless the brief asks to change them; removing platform overlays does not mean removing the product UI.
+Include all intended changes in one generation. If the result needs another attempt, revise the prompt and use the original source again. Do not edit a generated face, then edit that result to add earrings, then edit it again to change the background. Repeated edits can soften detail and move the image further from the source.
 
-For a request limited to a plan or reference images, deliver those assets and stop before video generation.
+For an authorized batch, send the original frame into every independent variant. Keep the prompts and results together so the user can compare them.
 
-## B-roll and product shots
+Use the user's chosen image model and tool. For Nano Banana through Cospark, call `generate_image` with the source in `references`: `nano-banana-pro` selects Pro, and `nano-banana-2` selects Nano Banana 2 / Flash. Check the connected schema for supported settings. Read [Cospark tools](cospark-tools.md) for uploads, returned assets, and run handling.
 
-Use existing media as the default reference for B-roll, demonstrations, close-ups, inserts, and additional coverage too. Do not start these shots from text alone merely because the target product differs from the reference. Choose the reference for its shot design and physical action, then attach its exact frame to the image edit.
+## 4. Preserve the source lighting
 
-Separate the reference roles: the existing shot supplies composition, camera angle, distance, lighting, hand placement, and action; the target product image supplies its shape, packaging, branding, or interface; the selected character image supplies identity when a person appears. Preserve what transfers naturally and adjust the prompt for what must change. Adapt the grip and movement when the new object requires it, rather than forcing an implausible exact pose.
+Keep exposure, shadow direction, and the ordinary phone-camera finish. A brighter face or smoother skin can make the edit look less believable even when the new identity is good.
 
-For example, a handheld skincare-bottle shot can guide a drink-bottle shot: keep the camera position, light, background, and presentation gesture, but replace the bottle and label with the target product and adjust the grip to fit. A different app demo can supply phone angle and hand placement while the screen is replaced with the target app.
+When casting is flexible, prefer a new person with roughly the same skin-tone lightness as the source. Large complexion changes have been less reliable in our reference edits. Skin tone and ethnicity are separate attributes; a different identity or ethnicity does not require a large change in lightness. If the brief calls for a substantially different complexion, find a closer source rather than changing the requested casting.
 
-When video generation is requested, create clean adapted frames first and use them to generate the new footage. This does not require passing the original video into the video model. Keep the source product, branding, and dialogue out of the result unless the brief calls for them.
+Check for added light from the front. If the edit has brightened the face, a focused correction is:
 
-## Example edit direction
+> Do not add frontal fill light or brighten the face. Preserve the source image's facial exposure, lighting direction, and natural shadows.
 
-> Edit this exact frame to depict a distinctly different adult person. Change the facial identity to [new face description], the clothing to [outfit], and the colors to [requested colors]. Preserve the original expression, gaze, head angle, body pose, hands, object positions and grip, camera angle, framing, background, lighting, shadows, and photographic texture. Keep the candid source-video appearance. Remove the overlaid UI and captions. Do not redesign the scene or turn it into a polished portrait.
+Both Pro and Flash added some frontal brightness in the September 2026 cooking-frame comparison; Pro was more restrained in that pair. This is a reason to inspect the result, not a general ranking of the models. The cause of the complexion-related drift has not been isolated.
 
-Fill in only the changes needed for the request; do not add appearance changes to a cleanup-only task.
+## 5. Compare the source and edit
 
-## Check before animation
+Show both images when the user is choosing a creator. Check:
 
-Compare the edit with the source: the intended appearance changes should be clear, and the rest should still read as the same shot. Check the face, hands, grip, objects, and background for drift. A prettier image is not a better starting frame if it loses the source's realism or cannot support the action.
+- The new person is clearly different from the source person.
+- The expression, gaze, body pose, and hand positions still fit the shot.
+- The face has not gained unwanted brightness, smoothing, or studio lighting.
+- The room, crop, props, and product details remain correct.
+- Requested text cleanup is complete and hands or objects have no obvious distortions.
 
-Pass the edited image as the actual start frame when the video workflow supports exact starting frames. For a sequence guided by multiple images, label the identity and shot roles explicitly.
+If one detail drifts, name that detail in the next prompt. A longer prompt is useful when it fixes a specific miss; it is not automatically better. A good-looking still also needs a short motion test before relying on it for a new video setup.
+
+## Keep one character across several shots
+
+First establish the new person in one clear frame. For each additional shot, attach its own original frame as Image 1 and the selected creator image as Image 2:
+
+> Edit Image 1. Use Image 2 for the person's facial identity only. Preserve Image 1's expression, gaze, hairstyle, pose, lighting, camera angle, and setting. [Add the changes needed for this shot.]
+
+The generated identity image is a second reference, not a replacement for the original shot. Do not use the previous edited shot as the next shot's source. Keep an exercise grimace, a downward glance, or a tied-back hairstyle when the action calls for it. Describe outfit changes separately.
+
+## Adapt product shots and B-roll
+
+A reference from another category can supply the camera angle, light, hand placement, or action. Attach the target product separately for its shape, packaging, branding, or screen content, and the selected creator image when identity matters. State what each reference supplies.
+
+For example, a bottle presentation can guide a different bottle shot, but the grip may need to change to fit the new object. An app reference can supply the phone angle; use real target-app captures for accurate UI. Keep changes in one edit from the original frame.
+
+For animation, pass the selected image as the actual starting frame when supported. When using several reference images, describe their roles and follow the model's supported inputs. Continue with [UGC video planning](ugc-video-structure.md) for the first-line test and remaining script.

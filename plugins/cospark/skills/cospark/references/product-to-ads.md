@@ -1,12 +1,12 @@
 # Product to ads
 
-Turn a product brief into inspectable references, concrete creative directions and a production plan. Use the reference-ad gallery as a shared place to review decisions. Read [the full workflow](product-to-ads-workflow.md) for the stages and deliverables; enter at the stage the user needs rather than repeating completed research.
+Turn a product brief into useful references, creative concepts, and a production plan. Keep the research and decisions in one project document. Read [the full workflow](product-to-ads-workflow.md) for the stages and deliverables; start at the stage the user needs rather than repeating completed research.
 
 ## Scope the work
 
 Reuse the product URL, audience, offer, assets, prior research and decisions already available. Inspect the product and sources before filling gaps with assumptions. Ask only for missing information that materially changes the work; continue independent research where possible.
 
-For a new-product research request, the usual deliverable is a browsable reference gallery plus a few distinct concepts. For an authorized end-to-end request, continue through production and review. A reviewable gallery is a useful milestone, not a mandatory approval gate for already authorized work. Discussing this workflow does not itself authorize paid generations, publishing or campaign launch.
+For a new-product research request, return a concise Markdown document with original source links, useful observations, and a few distinct concepts. Build a gallery only when requested. For an authorized end-to-end request, continue through production and review without adding an approval gate. Discussing this workflow does not itself authorize paid generations, publishing, or campaign launch.
 
 ## Route execution
 

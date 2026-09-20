@@ -1,6 +1,6 @@
 # From a new product to finished ads
 
-Use a reference-ad website to make research easy to inspect and discuss, then turn the selected references into scripts, shot plans and finished creative. Scale the work to the brief. A quick test may need only a few examples and one concept; the numbers below are starting points, not quotas.
+Keep research in one project Markdown document, then turn the selected references into scripts, shot plans, and finished creative. Build a review website only when requested. A quick test may need only a few examples and one concept; scale the work to the brief.
 
 ## 1. Understand the product and collect its proof
 
@@ -10,7 +10,7 @@ Collect usable screenshots, app recordings, product photos, packaging, demonstra
 
 Deliver a compact product brief: audience, problem, promise, evidence, offer and available assets. Reuse an existing brief rather than asking the user to repeat it.
 
-## 2. Research references and build the review gallery
+## 2. Find useful ads and real creator videos
 
 Search three directions:
 
@@ -18,9 +18,9 @@ Search three directions:
 - Adjacent products: similar audiences, problems or buying motivations.
 - Creative references: useful hooks, creator setups, demonstrations and editing styles from any relevant category.
 
-An initial shortlist of roughly 8–12 useful examples can provide variety. Inspect the strongest few more closely, including the actual visuals, dialogue and relevant transitions. Explain why each reference fits this product rather than merely collecting similar brand names.
+Start with a small shortlist and inspect the strongest videos, including their visuals, dialogue, and relevant transitions. For a realistic presenter, follow [Finding reference videos](reference-discovery-and-inspection.md): search Instagram and TikTok for the audience's situation and a usable speaking frame. Search ad libraries separately for scripts and ad structure. Explain what each reference contributes.
 
-Each gallery entry should include:
+For each selected reference, include:
 
 - A playable ad or an honestly labeled preview when playback is unavailable.
 - Brand, source link, stable source ID when available, and duration.
@@ -28,9 +28,9 @@ Each gallery entry should include:
 - What makes it relevant and which elements could be adapted.
 - Important limitations, such as unclear product demonstration or unavailable performance evidence.
 
-The gallery should help the user compare creative choices. Avoid calling references winning ads without supporting performance data. Do not treat automated scene summaries as proof of exact cuts or realistic movement.
+The document should help the user compare creative choices. Avoid calling references winning ads without supporting performance data. Do not treat automated scene summaries as proof of exact cuts or realistic movement.
 
-Reuse an existing gallery/template when available; inspect its data shape and build instructions before updating it. Preserve earlier product reviews instead of overwriting them. A local preview is sufficient unless hosting is requested. Distinguish local preview, owner-only hosting and public publication. Keep stable source links and inspection evidence because third-party playback URLs can expire.
+Reuse existing research and preserve earlier reviews. Keep original source links because playback URLs can expire. Summarize useful inspection findings in the document; save extra technical artifacts only when needed for production or debugging. If a gallery is requested, reuse an appropriate existing template and keep it local unless hosting is also requested.
 
 ## 3. Propose distinct creative concepts
 
@@ -38,7 +38,7 @@ Turn the research into roughly three meaningful directions. Each should specify 
 
 For example, a product demonstration, a creator's routine and an objection-led explanation can test different reasons to care. Three differently worded openings on the same premise are hook variants, not necessarily three concepts.
 
-Adapt the reference to the new product's actual benefit and evidence. Preserve the user's chosen concept or exact script when already supplied. A request for research can end with the gallery and concepts; do not start generation merely to make the research feel complete.
+Adapt the reference to the new product's actual benefit and evidence. Preserve the user's chosen concept or exact script when already supplied. A request for research ends with the document and concepts; do not start generation merely to make the research feel complete.
 
 ## 4. Build a shot plan and source the missing coverage
 
@@ -48,14 +48,18 @@ Map the script to the creator's face, product demonstration, supporting action a
 | --- | --- |
 | Overall structure and edit rhythm | Reference ads |
 | Candid actions and filming setups | Creator videos, TikTok or Reels |
-| A specific pose, room or composition | Photographs or Pinterest |
+| A specific pose, room or composition | An exact creator-video frame or a supplied photograph |
 | Accurate product behavior | Actual product captures |
 
 Source only what is needed. Related shots from one creator may offer stronger continuity than unrelated attractive photographs. Inspect selected media and extract actual frames when adapting a specific shot.
 
+If there is no usable app-demo footage, choose a concept that works with a spoken benefit and relevant everyday activity. Do not make the plan depend on an invented screen recording or imply generated UI proves real product behavior.
+
 References are especially useful for exact identity, product and composition. Generic invented B-roll does not always need a prepared image: a well-described timed montage is also a useful generation route. Distinguish simply showing an object from handling, eating or using it, and include those actions deliberately.
 
-## 5. Produce the first complete ad
+## 5. Test the new creator, then produce the ad
+
+Prepare the creator with [one edit from the original frame](creating-a-realistic-character.md). For a new setup, test a short first line within the authorized video work, then check its speech, face, gestures, pace, and lighting before producing the full script. Reuse a setup that has already passed this check. Follow [UGC video planning](ugc-video-structure.md) for the handoff from the test to full-script generation.
 
 Choose production methods per shot and honor the user's model choices. Working starting points from the current experiments are:
 
@@ -79,8 +83,8 @@ Distinguish creative review from campaign performance. A visually approved ad is
 
 ## 7. Retain the work and learn from it
 
-The review website can grow from reference ads to proposed concepts, generated drafts and selected versions. Add those stages when useful; do not assume an existing reference gallery already implements them. Keep concise decision notes beside the artifacts.
+Keep references, concepts, generated drafts, and selected versions linked from the project document. Record which version was chosen and why so the next task can reuse it.
 
 Store scripts, prompts, versions, run IDs and review evidence with the product. Promote cross-project lessons into maintained skills, with their scope and evidence. When campaign results are available, use them to choose the next hypothesis while considering audience, offer, placement and spend; do not attribute every difference to the creative alone.
 
-The usual first deliverable for a new product is the research gallery plus a few proposed concepts. That gives the user concrete creative directions before substantial production work.
+The usual first deliverable for a new product is the research document plus a few proposed concepts.

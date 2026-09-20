@@ -29,6 +29,6 @@ The user's explicit instructions take precedence over these workflow defaults. P
 
 Keep the deliverable within the request: research returns sources and concepts; prompt writing returns the prompt; authorized production proceeds through generation and review. Planning or prompt writing alone does not authorize paid generations. Do not add a new approval gate to work already authorized.
 
-For controlled realistic shots, prefer a supplied photograph or exact video frame and adapt it as requested. Honor explicit text-only or no-reference requests without adding image preparation. Model guidance and examples describe scoped observations; the connected tool schema determines supported inputs and settings.
+For a new realistic UGC creator, follow [reference discovery](references/reference-discovery-and-inspection.md): find a real Instagram or TikTok video, choose a useful moment, and extract its frame. Then [make the new character](references/creating-a-realistic-character.md) in one edit from that original. Test the first spoken line before producing the remaining script when the setup is new and video production is authorized. Reuse suitable supplied assets or an already tested setup. Honor explicit text-only or no-reference requests.
 
 Before generation, use the tool guide's run-tracking and retry rules. Preserve original run IDs and poll pending jobs; another charged retry requires authorization. Verify finished media before claiming its dialogue, action, or timing matches, and disclose missing output or inspection limits.

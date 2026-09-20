@@ -1,50 +1,77 @@
-# Reference discovery and inspection
+# Finding and choosing reference videos
 
-Use when a brief needs visual references for A-roll, B-roll, product shots, or an edited sequence. This workflow coordinates available search, inspection, image-editing, generation, and editing tools; it does not provide new API endpoints or assume every search provider is connected. Scale the work to the request: a quick test may need only a few inspected shots.
+For realistic UGC, start with a real creator video. Look for someone filmed in an ordinary setting, with believable light, a useful camera angle, and an action that fits the script. Use a supplied or saved reference when it already works.
 
-## Search for the shot
+## 1. Search for the situation
 
-Translate the brief into visible actions and compositions before searching. For meal planning, useful queries include “overhead dinner ingredients,” “woman checking phone beside groceries,” and “close-up fork lifting spaghetti.” A similar product category can help, but a different category may supply the right grip, camera angle, light, or movement.
+Turn the idea into something a person would actually say or do. Search Instagram Reels and TikTok for that situation and the filming format. A creator does not need to mention the target product to provide a good reference.
 
-Choose sources for the evidence needed:
+For a cooking app without app-demo footage, useful search directions include:
 
-| Source | Useful evidence |
+| Search phrase | What to look for |
 | --- | --- |
-| Ads | Shot sequence, relationship to narration, product demonstration, cut rhythm and camera moves. |
-| TikTok / Reels | Everyday activities, candid environments, physical movement and creator filming setups. |
-| Pinterest / photographs | Specific compositions, poses, rooms, food presentation and lighting. A still cannot establish motion or edit rhythm. |
+| “let's cook dinner” | Someone speaking to the phone before cooking |
+| “dinner in 20 minutes” | A real reason for urgency and a casual home setting |
+| “what I'm making for dinner” | A visible creator followed by cooking coverage |
+| “don't know what to cook” | A spoken problem the app could help solve |
 
-Start with supplied media or a suitable saved reference. For ad discovery, use Cospark `search_ads`; use `list_ad_brands` before filtering by advertiser. For social or Pinterest search, use an available connector, documented ScrapeCreators integration, or browser search. Verify supported endpoints and returned media fields before calling them. A provider offering a capability does not mean the current Cospark MCP exposes it. If one source is unavailable, use another suitable source and disclose the gap rather than building an integration as part of a reference-only request.
+These are example queries, not a record of the exact searches used in an earlier job. Vary the wording when results are mostly recipes, music montages, or screen recordings. Once a creator has the right filming style, inspect nearby reels on their profile.
 
-## Inspect before selecting
+Choose each reference for its job. Talking-head footage supplies the presenter setup; cooking footage supplies supporting shots; a real app recording supplies product behavior. A popular food montage may be useful B-roll but cannot supply a speaking creator frame. When no app recording is available, plan a spoken benefit with relevant everyday activity rather than inventing a working app demo.
 
-Use search thumbnails or contact sheets to shortlist candidates, then inspect the actual selected media. For video, use `inspect_media` and visually review its returned sheets alongside the scene timings. Reuse an adequate existing inspection. Watch the relevant passage when motion, object handling, a reveal, or exact cuts determine suitability. A transcript alone is insufficient for selecting visual B-roll.
+## 2. Use ScrapeCreators for organic discovery
 
-Prefer candidates with useful framing, visible hands and props, plausible action, suitable light, and enough detail for the intended output. Check for obstructing text, motion blur, awkward transitional poses, and backgrounds that would be difficult to adapt. Rank by the target shot's needs; views, likes, or ad longevity do not establish visual suitability or conversion performance.
+Use the connected ScrapeCreators MCP when available. Check its current schema before calling it; tool versions and fields can change.
 
-When a montage should feel recorded by one person, assess the set together: camera distance, viewpoint, light, surfaces, framing and food/product styling should plausibly belong to the same filming context. One creator's video or related sequence may provide stronger continuity than individually attractive photos from unrelated sources. For casual food recordings, search for someone showing their meal; a styled recipe photograph or an eating action may serve a different brief. Prefer sources that already contain the intended wide view instead of relying on later digital zoom-out to reveal missing surroundings.
+| Task | Tool |
+| --- | --- |
+| Find Instagram reels by phrase | `v2_instagram_reels_search` with `query` |
+| Look through a promising creator's reels | `v1_instagram_user_reels` with `handle` or `user_id` |
+| Fetch a selected reel's caption and video URL | `v1_instagram_post` with its original `url` |
+| Find TikTok videos by phrase | `v1_tiktok_search_keyword` with `query` |
+| Fetch a selected TikTok and optional transcript | `v2_tiktok_video` with its original `url` |
 
-For a montage, record shot order, approximate duration, action, shot scale, camera movement and crop changes separately. Contact sheets and scene detection suggest boundaries; confirm before/after frames or playback before calling cut timings exact. Distinguish a hard cut, static punch-in and continuous camera move.
+Instagram reel search uses Google-indexed results, so it is incomplete and may miss recent posts. Follow up on promising profiles. The user-reels endpoint does not return captions; fetch individual posts when their wording matters. On TikTok, relevance is a useful starting sort for finding a particular shot; popularity is optional context. Remove unnecessarily narrow date filters when looking for an evergreen filming setup.
 
-Show a compact shortlist with a preview, source link, what each reference contributes, and any material limitation. For video, retain timestamps and a playable source. Stop at this deliverable when the user requested research or frame review only; do not make preview approval a new mandatory step when generation is already authorized.
+If ScrapeCreators is unavailable, use another connected social-search tool or browser search, such as `site:instagram.com/reel/ "let's cook dinner"`. Open and verify candidates before recommending them. Do not invent search endpoints or describe Cospark's ad library as a general Instagram search.
 
-## Extract and adapt the selected frames
+Use Cospark `search_ads` for ad references and `list_ad_brands` before filtering by advertiser. Organic videos are especially useful for natural creator setups; ads are useful for scripts, product demonstrations, and edit structure.
 
-Obtain the actual individual frame at the selected timestamp and best available quality. Use a contact sheet to choose the moment, not as the image-edit input. Record which source and timestamp produced each frame.
+## 3. Watch before choosing
 
-Follow [Creating realistic characters and shots](creating-a-realistic-character.md) for adaptation. Assign separate roles to composition, character identity and product references. Preserve the source's useful photographic texture, lighting and physical staging while making the requested changes. Cleanup should not automatically beautify the scene or remove relevant product detail. Compare the source and edit for drift in hands, grip, face, props and framing.
+Shortlist from previews, then inspect the strongest videos. For an external reel, pass its playable media URL to Cospark `inspect_media` and view the returned contact sheets. For an indexed Cospark ad, use `get_ad` and its existing analysis first. Watch the relevant passage when speech, gestures, object handling, or cuts affect the decision. A caption or transcript cannot establish what the shot looks like.
 
-## Choose the generation and editing route
+For a creator frame, check:
 
-- **Controlled opening or recurring identity:** prepare suitable frames and references. Check the tool's actual input combinations; an image described as the opening in a reference prompt is not a technically enforced starting frame.
-- **Timed actions, camera moves or an invented montage:** use the chosen model's prompting skill. Seedance can be directed with successive shot descriptions and timestamps; inspect what it actually produces. When the user requests text-only generation, write the shot plan without attaching images or video. Keep this as the requested test rather than silently adding reference inputs.
-- **Precise cuts, trims or crop changes:** use FFmpeg or an available video editor to select and assemble useful moments. Several short inserts can come from a longer source clip. Choose screen time by the brief: fast UGC often uses roughly one- to two-second inserts, while a readable demonstration or continuous reveal may need longer.
-- **A close-to-wide reveal or changing viewpoint:** generate the needed camera motion when it reveals surroundings absent from the source or changes perspective. A digital zoom-out can be edited if an already-wide source contains the scene. For example, prompt a camera pulling back from a swimmer to reveal the pool when that wider view needs to be created.
+- **Face and posture:** a visible face, a natural speaking expression, and hands that can support the intended gesture.
+- **Light:** skin detail remains visible in the brightest parts of the face. Avoid large blown-out white patches.
+- **Setting:** an ordinary room with some depth and believable background detail.
+- **Camera:** useful distance and framing, with the texture of real phone footage.
+- **Obstructions:** little motion blur and preferably no captions over the face, hands, or important objects.
+- **Script fit:** a believable reason for the person to be speaking in that setting.
 
-Choose per shot. One successful manual montage does not establish a universal model or editing preference. For a reference adaptation, continue with [Using a reference video](using-a-reference-video.md); for a complete narrated ad, use [UGC video planning and structure](ugc-video-structure.md).
+Rank visual suitability separately from topic relevance. Views and likes can help narrow a search, but they do not prove a frame will work or an ad will convert.
 
-## Review and retain useful evidence
+For B-roll, check the action, hand placement, objects, and camera movement. When several shots should feel recorded by one person, compare their rooms, light, surfaces, and filming distance together. Related footage from one creator often fits better than unrelated attractive images.
 
-Inspect generated media against the requested action, continuity, realism, camera move and cut rhythm. Verify actual duration and dimensions before describing a result as meeting a duration or resolution request. A numeric value written in a prompt is not an output setting. Keep model-generated edits distinguishable from subsequent manual cuts or timing repairs, and state when review was limited to sampled frames.
+## 4. Save the useful moment
 
-Save source links or IDs, selected timestamps, frames, adaptations, prompts and output IDs with the job. Tag useful references by action, framing, setting, camera move and visual style so they can be found for another category. Add them to an existing shared reference store when available; do not imply that a reference-library service exists or treat temporary media URLs as durable originals. Record reusable lessons in the maintained skills, keeping job-specific artifacts and untested hypotheses clearly identified.
+Keep the original post link, creator handle, useful time range, and a short reason for choosing it in the project's research document. A compact shortlist is enough; build a gallery only when requested. Keep previews or playable links where supported, and label anything you could not inspect.
+
+Extract the actual individual frame from the selected passage at the best available resolution, preferably as PNG. A lossless export avoids another compression step; it cannot restore missing source detail. Record the timestamp. Use contact sheets to choose moments, never as image-edit inputs. A reel cover can differ from the video: label it as a cover if that is all you have, and do not invent a frame timestamp.
+
+Retain the original post URL even when a temporary CDN video URL works. Refresh expired media through the source provider. Upload the selected frame to Cospark when a reusable file ID is needed.
+
+## 5. Make the new creator, then test the performance
+
+Follow [Creating a realistic character](creating-a-realistic-character.md). Make all intended changes in one edit from the original frame. Review the new image beside its source before animating it.
+
+For a new presenter setup, use an authorized short first-line test to check the face, voice, gestures, pace, and lighting in motion. Once it works, reuse that frame and direction for the remaining script. See [UGC video planning](ugc-video-structure.md). Research or image-only requests end with those deliverables; an end-to-end request can continue without another approval stage.
+
+For an edited sequence, record shot order, action, approximate duration, and camera or crop changes. Confirm cuts with playback or adjacent frames before calling their timing exact. Generate camera moves when they reveal a new view; use an editor for precise trims, cuts, and crops of footage that already exists.
+
+## Example: a cooking-app creator
+
+In the September 2026 trial, [Cierra Neal's dinner reel](https://www.instagram.com/reel/DTQcDHMEXOk/) worked as a reference because its opening six seconds showed someone speaking to the phone in an ordinary home hallway, with natural household activity and a reason to hurry dinner. The product did not need an on-screen app demo for that setup to make sense.
+
+The useful pattern is the immediate situation, natural light, and speaking frame. The creator's identity and incidental family members are not requirements for the new ad. This was an approved creative reference, not evidence of conversion performance.

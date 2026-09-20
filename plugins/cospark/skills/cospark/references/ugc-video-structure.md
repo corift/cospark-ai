@@ -24,9 +24,17 @@ Without a reference video, build the shot list from the script. Use [realistic s
 
 Give each planned insert one clear job: the phrase it supports, the action or detail to show, and the framing that makes it legible. Maintain the same character and product across coverage. Choose wardrobe and location continuity appropriate to the story; different activities can naturally use different outfits.
 
+## Test the first line for a new setup
+
+When video production is authorized and the presenter setup is new, generate one short spoken test from the chosen creator frame using `generate_video_from_frames`. Use an actual line from the script, the requested video model, and a supported duration. Reuse a successful existing test instead of charging for the same check again.
+
+Watch and listen for a believable face, natural gestures and blinks, clear speech, useful pace, and lighting that still matches the frame. Keep the direction simple: camera behavior, delivery, exact dialogue, and only the constraints the shot needs. Do not add filler words to force pacing or substitute a numeric WPM instruction for listening to the result.
+
+If the test needs work, identify whether the frame, performance direction, dialogue length, or edit is responsible. Follow the existing authorization and retry rules. Once it works, keep the chosen frame and delivery direction for the full script. This test is a production step, not a new mandatory user-approval stage. A research, prompt-only, or image-only request does not authorize it.
+
 ## Create coverage that will cut together
 
-For a talking-head-plus-B-roll ad, generate the complete spoken A-roll through the full UGC workflow, using the chosen creator frame. Generate the supporting shots separately from their prepared frames. Independent coverage can run alongside the A-roll; wait for the actual speech before locking edit times.
+For a talking-head-plus-B-roll ad, pass the complete script, chosen creator frame, and tested direction to the full UGC workflow. Let it handle script splitting; do not manually generate every remaining line as a separate job. Generate supporting shots separately from their prepared frames. Independent coverage can run alongside the A-roll; wait for the actual speech before locking edit times.
 
 Give a short B-roll generation one manageable action and enough usable footage to choose its entrance and exit. A three-second generated clip may supply a much shorter insert. Do not ask each insert to tell a complete mini-story, repeat the narration, or change scenes internally unless the brief needs that.
 

@@ -1,0 +1,63 @@
+[
+  {
+    "id": "instagram-creator-without-demo",
+    "request": "Find an Instagram creator reference for a cooking app like ReciMe. We have no app-demo footage. I want someone talking naturally at home, not just recipe close-ups. Research only.",
+    "context": "Dry run. ScrapeCreators reel search, profile reels, and post tools are available, as is Cospark inspect_media. Candidate A is a highly viewed music-led recipe montage. Candidate B opens with a creator explaining she needs to get dinner ready quickly, then shows cooking. No campaign results are available.",
+    "criteria": [
+      "Search for the dinner situation and speaking format through organic-social tools, not only app names or Cospark ad search.",
+      "Fetch and inspect the relevant creator passage before selecting B; retain A only if useful as B-roll.",
+      "Return original links, useful ranges, reasons, and limitations in one document, without a default gallery.",
+      "Do not claim engagement proves conversion or generate media during research."
+    ]
+  },
+  {
+    "id": "source-rerolls",
+    "request": "Use Nano Banana Pro through Cospark to make three fictional creators from this original frame. Change the woman, add a green shirt and earrings, and remove the captions. Keep the room and lighting. You may generate these three images.",
+    "context": "Dry run. The original frame and one older generated version are available.",
+    "criteria": [
+      "Use generate_image with nano-banana-pro and the original frame in every run's references.",
+      "Put all intended changes in each concise prompt; do not chain edits through the older output or a new variant.",
+      "Review identity, exposure, gaze, hands, room, and caption cleanup; retain output IDs and URLs.",
+      "Do not generate video or add unrequested scene changes."
+    ]
+  },
+  {
+    "id": "casting-and-source-light",
+    "request": "The new creator must have a much darker complexion than this source person. Preserve the same casual hallway setup. Help me choose the starting reference before generating.",
+    "criteria": [
+      "Preserve the requested casting and look for a closer-complexion source with the desired setup.",
+      "Explain the reference-fidelity preference without treating ethnicity as a skin-tone category or claiming a proven model mechanism.",
+      "Do not generate media in this reference-selection step."
+    ]
+  },
+  {
+    "id": "cover-is-not-extracted-frame",
+    "request": "The only image returned for this reel is its cover. Use the exact frame at 2 seconds to replace the creator.",
+    "context": "Dry run. A contact sheet and reel cover are available, but no individual extracted frame at 2 seconds has been obtained.",
+    "criteria": [
+      "Obtain the actual video frame before an exact-frame edit, or report the extraction limitation.",
+      "Do not label the cover or a contact-sheet crop as the exact 2-second frame.",
+      "Keep the original post link and verified source timestamp with the eventual frame."
+    ]
+  },
+  {
+    "id": "first-line-then-full-script",
+    "request": "Make the complete UGC ad from this new creator image and approved script, with Gemini for the presenter. You may generate and assemble it.",
+    "context": "Dry run. This presenter setup has never been animated. The full UGC orchestration tool is available.",
+    "criteria": [
+      "Plan one short first-line test using the exact script and requested model, then inspect speech and motion.",
+      "Carry the selected frame and successful direction into full-script UGC orchestration without manually splitting every line.",
+      "Keep pending run IDs, respect the authorized retry scope, and do not add an unnecessary approval gate.",
+      "Do not invent filler dialogue, generation success, or inspection results."
+    ]
+  },
+  {
+    "id": "preserve-in-scene-writing",
+    "request": "Replace this creator and remove the social captions. Keep the bottle label and phone screen exactly as they are. Give me only the image-edit prompt.",
+    "criteria": [
+      "Write a concise change-only prompt that preserves the bottle label and phone screen.",
+      "Do not add a blanket no-writing instruction or erase product UI.",
+      "Do not call tools to generate images or video."
+    ]
+  }
+]
