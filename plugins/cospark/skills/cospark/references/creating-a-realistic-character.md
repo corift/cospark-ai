@@ -30,6 +30,17 @@ For an authorized batch, send the original frame into every independent variant.
 
 Use the user's chosen image model and tool. For Nano Banana through Cospark, call `generate_image` with the source in `references`: `nano-banana-pro` selects Pro, and `nano-banana-2` selects Nano Banana 2 / Flash. Check the connected schema for supported settings. Read [Cospark tools](cospark-tools.md) for uploads, returned assets, and run handling.
 
+### Choose the image model
+
+When the user has not specified a model for the edit:
+
+- **Nano Banana 2 / Flash (`nano-banana-2`):** start here for simple non-human B-roll edits, such as removing captions from food footage, cleaning up a countertop shot, or removing an unwanted prop.
+- **Nano Banana Pro (`nano-banana-pro`):** prefer it for replacing a creator or matching their identity across shots, and for edits where fine detail or reference fidelity is especially important.
+
+Judge the edit, not just whether a face is visible. Hands gripping objects, exact packaging, small lettering and difficult lighting can need more care even in a faceless shot. Use real product assets and inspect the result; Pro does not guarantee correct text or geometry. If Flash misses something important, identify the miss and follow the existing retry authorization before trying again from the original with Pro.
+
+Treat Flash as a budget-conscious starting choice, not a guarantee of equal quality. Check current Cospark credit costs before quoting savings.
+
 ## 4. Preserve the source lighting
 
 Keep exposure, shadow direction, and the ordinary phone-camera finish. A brighter face or smoother skin can make the edit look less believable even when the new identity is good.

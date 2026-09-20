@@ -2,7 +2,21 @@
 
 Shared guidance for Gemini and Seedance B-roll, product inserts, and native montages: framing, visible action, source timing, assembly, and review. Apply the selected model guide and current tool schema for execution settings. The Gemini examples and observations below retain their original scope; they are not evidence of identical Seedance behavior.
 
-For montages, start with [Timed B-roll shot prompts](broll-shot-prompts.md), the shared Seedance/Gemini structure endorsed after the seven-shot food test. The single-shot example below serves continuous coverage; it should not replace a requested montage.
+For reference-led B-roll, prepare and animate the individual shots below, then cut their best moments together. For a montage generated inside one clip, use [Timed B-roll shot prompts](broll-shot-prompts.md).
+
+## Start with a real shot
+
+For realistic UGC B-roll, find an existing Instagram or TikTok video that already has useful framing, lighting, surroundings and activity. The video does not need to advertise the same product, follow the same script, or match the whole ad. Choose it for the shot you need. A dinner reel can supply cooking coverage for a meal-planning app; a morning routine can supply a countertop or product-handling setup for another product.
+
+First check the video that supplied the creator frame. It may also have the preparation, activity and result shots you need. Otherwise, find another suitable video through [reference discovery](reference-discovery-and-inspection.md). Keep rooms, light, props and wardrobe compatible when the sequence should feel recorded by one person. Do not force an unsuitable shot just to stay with one source. Honor supplied footage and explicit text-only or no-reference requests.
+
+1. Inspect the actual video and extract an original frame for each useful shot. Keep its source link and timestamp; do not use a contact-sheet crop.
+2. Make all needed changes in one image edit from that original frame. Preserve what already works. Change only the relevant person, product, clothing or props and remove social overlays. When a person must match the selected creator, attach that creator image as a separate identity reference. Never use the last edited shot as the next shot's source.
+3. Choose the image model by the edit, using [the frame-edit model guide](creating-a-realistic-character.md#choose-the-image-model). Simple food or object cleanup can start with Nano Banana 2 / Flash; creator identity edits normally use Pro. Review the frame before animation.
+4. Animate the edited frame with one manageable action or small phone movement. Pass it as the actual starting frame. Preserve the requested video model; for Gemini Omni 1.1 Flash, follow [Gemini video](gemini-video.md).
+5. Inspect the clip and keep its useful moment. A three-second generation can supply a one- or two-second insert. Cut the shots against the narration, mute unwanted source audio, and avoid adding zooms or speed changes without a reason.
+
+Use the source to guide new footage, not as permission to insert someone else's original video into the finished ad. If a reference shows a different product, use the target product's real assets for its appearance and details; do not carry over the reference brand or invent a working app screen.
 
 ## Plan the visible action and opening
 
@@ -46,7 +60,3 @@ The model's timestamps refer to the source clip. Record source in/out points sep
 - Watch the action and camera path at normal speed. For reported lag or stutter, check playback, source cadence, repeated/held frames and export timing before assigning a cause. Matching nominal frame rates does not establish smooth motion. Do not add interpolation or speed changes automatically.
 - Verify actual dimensions and duration. Treat resolution as a tool setting, not an adjective in the prompt.
 - Review sound separately. Model-generated audio may still be present; mute it in an intended silent assembly. Conflicting automated audio descriptions and transcripts require listening before asserting speech occurred.
-
-## Evidence and scope
-
-In a September 2026 food test, the first edit added punch-ins and fork/spoon actions to footage meant to show untouched meals. The preferred revision used wider phone framing and removed those actions. Match the framing and activity to the brief, and choose related sources when the sequence should feel recorded by one person. This result does not establish a general model preference or a ban on top-down shots.

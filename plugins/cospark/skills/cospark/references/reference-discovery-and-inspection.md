@@ -52,7 +52,9 @@ For a creator frame, check:
 
 Rank visual suitability separately from topic relevance. Views and likes can help narrow a search, but they do not prove a frame will work or an ad will convert.
 
-For B-roll, check the action, hand placement, objects, and camera movement. When several shots should feel recorded by one person, compare their rooms, light, surfaces, and filming distance together. Related footage from one creator often fits better than unrelated attractive images.
+For B-roll, choose a useful shot rather than searching only for an exact match to the entire ad. A different product or topic can still supply the right angle, light, hand placement, surroundings or activity. Start with the selected creator's video and nearby reels, then broaden the search when they lack the shot you need. When several shots should feel recorded by one person, compare their rooms, light, surfaces, and filming distance together. Related footage often fits better than unrelated attractive images, but using one source is not a requirement.
+
+Extract those frames and follow [B-roll production](broll-production.md) to change only what the new ad needs, animate the shots, and cut their best moments together.
 
 ## 4. Save the useful moment
 
