@@ -4,13 +4,15 @@ Use this for a complete creator-led ad with supporting footage. The reusable app
 
 ## Default flow for reference-led UGC
 
-1. Find a useful Instagram or TikTok video through [reference discovery](reference-discovery-and-inspection.md). Look for the situation and filming style, not just the exact product.
-2. Make a distinct fictional creator with [one edit from the original frame](creating-a-realistic-character.md). Keep the source composition and ordinary lighting; put all intended changes in that edit. Start each new attempt from the original, not the previous edit.
-3. Test one spoken clip with the selected creator frame and a [simple prompt](gemini-talking-head.md). Reuse a test the user already likes.
-4. Generate the remaining dialogue as individual clips from that same creator frame. Preserve the successful delivery and camera direction.
-5. Make [reference-led B-roll](broll-production.md), checking the same reel first and using other compatible sources when needed. Each shot gets its own original frame; the selected creator can be a separate identity reference. Use the source to make new footage, not as permission to insert someone else's video.
-6. Finish and inspect all needed clips before assembly. Trim using actual speech timing, place short B-roll over continuous narration, and return to the creator where the ending benefits from eye contact.
-7. Render in the chosen editor, check the export, and upload to Cospark when that is the requested handoff. Retain the editable project and source media.
+1. Start with a rough idea: audience, problem, product benefit and format, such as a talking-head story with supporting footage. Check what real product assets are available.
+2. Find a small shortlist of useful Instagram or TikTok videos through [reference discovery](reference-discovery-and-inspection.md). Look for both a fitting story and shots we can adapt well. Inspect the strongest candidates before choosing the base reference.
+3. [Break down the reference](using-a-reference-video.md), then write the new script and storyboard together. Use its useful cuts, shot lengths, creator returns and B-roll placement, adapted to the new product. A separate ad can guide the edit when the organic source mainly supplies good shots. Preserve an already approved script.
+4. Make a distinct fictional creator with [one edit from the original frame](creating-a-realistic-character.md). Keep the source composition and ordinary lighting; put all intended changes in that edit. Start each new attempt from the original, not the previous edit.
+5. Test one spoken clip with the selected creator frame and a [simple prompt](gemini-talking-head.md). Reuse a test the user already likes.
+6. Generate the remaining dialogue as individual clips from that same creator frame. Preserve the successful delivery and camera direction.
+7. Make the storyboard's missing [reference-led B-roll](broll-production.md), checking the same reel first and using other compatible sources when needed. Each shot gets its own original frame; the selected creator can be a separate identity reference. Use the source to make new footage, not as permission to insert someone else's video. Use supplied recordings for real app demonstrations.
+8. Finish and inspect all needed clips before assembly. Trim using actual speech timing and interweave supporting shots with the creator over continuous narration. Return to the creator at useful reactions, explanations and the close, rather than saving every return for the ending.
+9. Render in the chosen editor, check the export, and upload to Cospark when that is the requested handoff. Retain the editable project and source media.
 
 This is the default for reference-led creator ads, not a requirement for every video. An explicit request for automatic script planning and assembly can use `generate_ugc_video`; an explicit model, editor, prompt-only request, or existing approved workflow takes precedence. Do not route a manual clip request through the automatic tool.
 
@@ -35,6 +37,18 @@ Map phrases to shots before generating footage. Choose B-roll because it helps t
 Without a reference video, build the shot list from the script. Use [realistic source-led frames](creating-a-realistic-character.md) to prepare the person, action shots, and product shots. The absence of a reference ad does not require inventing every image from text.
 
 Give each planned insert one clear job: the phrase it supports, the action or detail to show, and the framing that makes it legible. Maintain the same character and product across coverage. Choose wardrobe and location continuity appropriate to the story; different activities can naturally use different outfits.
+
+Keep one compact storyboard in the project document:
+
+| Script beat | What the viewer sees | Approximate hold | Source or asset | Ready or missing |
+| --- | --- | --- | --- | --- |
+| The everyday problem | Creator, then a relevant activity | Follow the reference's useful rhythm | Selected creator frame and activity source | Reuse or generate |
+| How the app helps | Actual action and result in the app | Long enough to understand both | User-uploaded screen recording | Ready or upload needed |
+| The payoff | Creator reaction, activity or finished result | Match the spoken beat | Compatible source shots | Reuse or generate |
+
+For app ads, ask for the specific recordings the storyboard needs, such as saving a recipe or making a grocery list. Reuse uploads already provided; do not require another upload. If a demo is missing, mark it as upload needed and continue independent work. A version without app demos can use spoken benefits and everyday activity, but that is illustration, not proof of the app's behavior. Do not quietly replace a planned demo with generated UI.
+
+Treat shot lengths as a rough edit plan, not a requirement to cut every two seconds. Short activity inserts can alternate with longer explanations or demonstrations. Avoid putting all B-roll in one late block by habit, or adding cuts that do not help the story. For a revision, map gaps in the current edit first and preserve approved dialogue and coverage; do not restart discovery and casting unnecessarily.
 
 ## Test the first line for a new setup
 

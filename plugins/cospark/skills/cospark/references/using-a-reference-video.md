@@ -8,7 +8,17 @@ Use `inspect_media` on the selected source and review the relevant returned cont
 
 Notice the actual opening, the order and length of shots, the relationship between words and images, camera distance and movement, product handling, and the ending. Distinguish a picture cut from a change in narration: B-roll may cover a continuous spoken sentence.
 
+For a new reference-led ad, compare a small shortlist before choosing the base. Evaluate both story fit and whether its shots can be adapted with the available creator and product assets. A pacing reference teaches the edit; a shot-source reference supplies framing, light and activity. They can be the same video, but do not force an organic cooking reel to supply an app-ad structure it does not contain.
+
+When pacing is the reason for analysis, record the useful cut sequence rather than only summarizing the story:
+
+**Shot start/end → duration → creator / activity / app demo → visible action → spoken cue.**
+
+Also note returns to the creator, crop changes within the same scene, and how long app actions and results remain visible. These details explain how supporting footage is woven into the spoken story. A few well-inspected samples are more useful than many unexamined links.
+
 Contact sheets contain sampled moments, not every frame. Treat estimated cut boundaries as estimates; use playback when the decision depends on motion, delivery, or a precise transition. Obtain individual source frames for image editing after selecting the shots. Frame extraction serves that purpose without requiring another content-analysis workflow.
+
+Automated semantic scenes are not an edit list. Check candidate boundaries against playback or adjacent frames before reporting exact cut times; scene detection can miss crop changes or mistake movement for a cut. Keep unverified timings labeled approximate. Do not call an observed rhythm a winning formula without performance evidence.
 
 ## Decide what the reference controls
 

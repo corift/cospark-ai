@@ -4,6 +4,8 @@ Shared guidance for Gemini and Seedance B-roll, product inserts, and native mont
 
 For reference-led B-roll, prepare and animate the individual shots below, then cut their best moments together. For a montage generated inside one clip, use [Timed B-roll shot prompts](broll-shot-prompts.md).
 
+For a full ad, start with the [script-linked storyboard](ugc-video-structure.md#plan-the-spoken-story-and-what-to-show), not a disconnected batch of attractive shots. Check where the creator, supporting activities and real product demonstrations belong. For each missing insert, name its spoken cue, visible action, approximate edited hold and source. Generate only the missing coverage; preserve good existing clips. A revision that needs more B-roll may need different activities and earlier placement, not simply more shots of the same payoff.
+
 ## Start with a real shot
 
 For realistic UGC B-roll, find an existing Instagram or TikTok video that already has useful framing, lighting, surroundings and activity. The video does not need to advertise the same product, follow the same script, or match the whole ad. Choose it for the shot you need. A dinner reel can supply cooking coverage for a meal-planning app; a morning routine can supply a countertop or product-handling setup for another product.

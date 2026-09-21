@@ -44,6 +44,8 @@ Adapt the reference to the new product's actual benefit and evidence. Preserve t
 
 Map the script to the creator's face, product demonstration, supporting action and visible result. Give each insert one purpose. Keep expressions or personal reactions on the speaker when that communicates more than another insert.
 
+Use the selected reference's actual cut pattern and shot roles to develop the script and storyboard together. Follow [reference breakdown](using-a-reference-video.md) for timing evidence and [the UGC storyboard](ugc-video-structure.md#plan-the-spoken-story-and-what-to-show) for phrase cues, approximate holds and missing assets. Do not wait until after generation to decide where all the supporting footage belongs.
+
 | Need | Useful source |
 | --- | --- |
 | Overall structure and edit rhythm | Reference ads |
@@ -53,7 +55,7 @@ Map the script to the creator's face, product demonstration, supporting action a
 
 Source only what is needed. Related shots from one creator may offer stronger continuity than unrelated attractive photographs. Inspect selected media and extract actual frames when adapting a specific shot.
 
-If there is no usable app-demo footage, choose a concept that works with a spoken benefit and relevant everyday activity. Do not make the plan depend on an invented screen recording or imply generated UI proves real product behavior.
+For app demos, use user-uploaded recordings and request any missing action/result the storyboard needs. If there is no usable demo footage, mark that gap and offer a version with a spoken benefit and relevant everyday activity. Do not make the plan depend on an invented screen recording or imply generated UI proves real product behavior.
 
 References are especially useful for exact identity, product and composition. Generic invented B-roll does not always need a prepared image: a well-described timed montage is also a useful generation route. Distinguish simply showing an object from handling, eating or using it, and include those actions deliberately.
 

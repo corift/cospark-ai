@@ -2,12 +2,35 @@
   {
     "id": "instagram-creator-without-demo",
     "request": "Find an Instagram creator reference for a cooking app like ReciMe. We have no app-demo footage. I want someone talking naturally at home, not just recipe close-ups. Research only.",
-    "context": "Dry run. ScrapeCreators reel search, profile reels, and post tools are available, as is Cospark inspect_media. Candidate A is a highly viewed music-led recipe montage. Candidate B opens with a creator explaining she needs to get dinner ready quickly, then shows cooking. No campaign results are available.",
+    "context": "Dry run. Cospark MCP provides Instagram reel search, profile reels, post details and inspect_media. No separate ScrapeCreators MCP is installed. Candidate A is a highly viewed music-led recipe montage. Candidate B opens with a creator explaining she needs to get dinner ready quickly, then shows cooking. No campaign results are available.",
     "criteria": [
-      "Search for the dinner situation and speaking format through organic-social tools, not only app names or Cospark ad search.",
+      "Search for the dinner situation and speaking format through Cospark's organic-social tools, not only app names or indexed ad search; do not require installing a separate ScrapeCreators MCP.",
       "Fetch and inspect the relevant creator passage before selecting B; retain A only if useful as B-roll.",
       "Return original links, useful ranges, reasons, and limitations in one document, without a default gallery.",
       "Do not claim engagement proves conversion or generate media during research."
+    ]
+  },
+  {
+    "id": "reference-led-storyboard-before-generation",
+    "request": "Plan a cooking-app UGC ad using a few Instagram or TikTok videos as the base. I want the cuts, B-roll and app demos intertwined. No generation yet.",
+    "context": "Dry run. Two inspected samples are supplied: one natural creator/cooking reel and one app ad with frequent creator returns. Their transcript and semantic scenes are available, but exact visual cuts have not been verified. No app recording has been uploaded.",
+    "criteria": [
+      "Separate the organic shot source from the app-ad pacing reference, and inspect actual transitions before reporting exact cut times.",
+      "Develop a product-specific script and compact storyboard together, with spoken cues, visual roles, approximate holds, source assets and missing coverage.",
+      "Interweave relevant activities and creator returns without imposing equal shot lengths; allow readable app actions and results enough time.",
+      "Request specific user-uploaded app recordings, label missing demos and avoid fabricating UI or treating activity footage as product proof.",
+      "Do not generate paid media or claim the reference rhythm establishes conversion performance."
+    ]
+  },
+  {
+    "id": "more-broll-preserves-approved-ad",
+    "request": "Plan more B-roll for this approved 23-second ad. Keep the creator and dialogue. We already like the three cooking shots, but they're all together near the end.",
+    "context": "Dry run. Current script and edit ranges are available. There is no user-uploaded app demo. Generation and timeline changes have not been requested.",
+    "criteria": [
+      "Map uncovered script beats and propose purposeful missing activities and distributed coverage rather than restarting casting or generating more food shots by default.",
+      "Preserve approved assets, distinguish illustrative phone activity from a real app demo, and mark any required upload.",
+      "Keep timings provisional until checked against actual speech; do not force a cut every two seconds.",
+      "Return a plan without generating media or changing the timeline."
     ]
   },
   {

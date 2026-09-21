@@ -19,11 +19,11 @@ These are example queries, not a record of the exact searches used in an earlier
 
 Choose each reference for its job. Talking-head footage supplies the presenter setup; cooking footage supplies supporting shots; a real app recording supplies product behavior. A popular food montage may be useful B-roll but cannot supply a speaking creator frame. When no app recording is available, plan a spoken benefit with relevant everyday activity rather than inventing a working app demo.
 
-## 2. Use ScrapeCreators for organic discovery
+## 2. Use Cospark's social tools for organic discovery
 
-Use the connected ScrapeCreators MCP when available. Check its current schema before calling it; tool versions and fields can change.
+Use the Instagram and TikTok search and scraping tools in the connected Cospark MCP. A separate ScrapeCreators MCP is not required. Check the current tool schemas before calling them; tool versions and fields can change.
 
-| Task | Tool |
+| Task | Cospark MCP tool |
 | --- | --- |
 | Find Instagram reels by phrase | `v2_instagram_reels_search` with `query` |
 | Look through a promising creator's reels | `v1_instagram_user_reels` with `handle` or `user_id` |
@@ -31,9 +31,11 @@ Use the connected ScrapeCreators MCP when available. Check its current schema be
 | Find TikTok videos by phrase | `v1_tiktok_search_keyword` with `query` |
 | Fetch a selected TikTok and optional transcript | `v2_tiktok_video` with its original `url` |
 
+Keep the default compact responses and use `maxResults` to bound shortlists. Request `responseMode: "raw"` only when a needed field is missing. Social calls and media downloads may consume credits; check the current tool description and do not enable paid media downloads just to browse references.
+
 Instagram reel search uses Google-indexed results, so it is incomplete and may miss recent posts. Follow up on promising profiles. The user-reels endpoint does not return captions; fetch individual posts when their wording matters. On TikTok, relevance is a useful starting sort for finding a particular shot; popularity is optional context. Remove unnecessarily narrow date filters when looking for an evergreen filming setup.
 
-If ScrapeCreators is unavailable, use another connected social-search tool or browser search, such as `site:instagram.com/reel/ "let's cook dinner"`. Open and verify candidates before recommending them. Do not invent search endpoints or describe Cospark's ad library as a general Instagram search.
+If Cospark's social tools are unavailable, use another connected social-search provider or browser search, such as `site:instagram.com/reel/ "let's cook dinner"`. Open and verify candidates before recommending them. Do not invent search endpoints or confuse Cospark's organic social search with its indexed ad library.
 
 Use Cospark `search_ads` for ad references and `list_ad_brands` before filtering by advertiser. Organic videos are especially useful for natural creator setups; ads are useful for scripts, product demonstrations, and edit structure.
 
