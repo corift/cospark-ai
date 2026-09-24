@@ -1,7 +1,9 @@
 ---
 name: cospark
-description: Plan and create AI video ads with Cospark. Use for ad-reference research, Gemini or Seedance video prompts, UGC, B-roll, media generation, inspection, and editing; not unrelated coding or general copy edits.
+description: Read this skill anytime you need to research, analyze, plan, create, inspect, or edit AI video ads with Cospark, including ad references, Gemini or Seedance prompts, UGC, B-roll, media generation, and timelines; not for unrelated coding or general copy edits.
 ---
+
+> Retired: this guidance now lives in the Cospark MCP. Call the `read_docs` tool with no path and follow the docs it returns; they supersede this skill and its references.
 
 # Cospark
 
@@ -13,6 +15,7 @@ Turn a product brief, script, or source media into the requested research, promp
 | --- | --- |
 | Research a product and develop ad concepts or a production plan | [Product to ads](references/product-to-ads.md) |
 | Find and evaluate ad, social, or photographic references | [Reference discovery](references/reference-discovery-and-inspection.md) |
+| Analyze one ad or compare several ads | [Ad analysis](references/ad-analysis.md) |
 | Recreate or adapt an existing video | [Using a reference video](references/using-a-reference-video.md) |
 | Create or adapt a realistic character, starting frame, or product shot | [Characters and shots](references/creating-a-realistic-character.md) |
 | Write or generate a Gemini clip | [Gemini video](references/gemini-video.md); for spoken clips, [talking-head prompting](references/gemini-talking-head.md) |

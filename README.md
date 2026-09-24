@@ -1,5 +1,7 @@
 # Cospark
 
+> **Retired.** Cospark's workflow guidance now ships with the Cospark MCP server itself: agents call `read_docs` (no path) for the docs homepage and load guides on demand. The docs live in [`corift/cospark`](https://github.com/corift/cospark) at `apps/api/src/mcp/cospark/docs/`. This repository and its `cospark` skill are kept for reference and are no longer updated; connect the MCP server below instead of installing the plugin.
+
 Research ad references and generate or edit images, videos, UGC, and voiceovers from AI agents through Cospark's authenticated remote MCP server.
 
 MCP server: `https://api.cospark.so/api/mcp/cospark`
@@ -17,7 +19,7 @@ MCP server: `https://api.cospark.so/api/mcp/cospark`
 - `inspect_media` — inspect video or audio and return timing, transcript, scene analysis, and a viewable contact-sheet image.
 - `upload_media` — import a public URL or prepare a signed upload for a local media file.
 - `search_ads` — search public image or indexed video ads; video results include playable URLs and contact-sheet previews.
-- `get_ad` — retrieve the full record for an image ad returned by `search_ads`.
+- `get_ad` — retrieve a compact evidence document for an image or indexed video ad, plus playable media and contact-sheet previews.
 - `list_ad_brands` — discover advertiser names before filtering ad search by brand.
 - `list_projects` — list existing projects that can contain a workspace.
 - `create_workspace` — create an editable workspace and return its session ID and chat URL.
@@ -86,7 +88,7 @@ Local files can be images, videos, or audio up to 100 MB.
 
 Use `search_ads` with `format: "image"` for static creative references or `format: "video"` for indexed video ads. Image queries use visual similarity; video queries search indexed transcripts, scene descriptions, on-screen text, and creative metadata. Video results include short-lived playable `videoUrl` values, chronological `contactSheetUrls`, resource links, and the first contact sheet as native high-detail MCP image content. The links are signed without exposing the private video-library credential.
 
-Review the inline contact sheet before choosing a video reference. Call `inspect_media` with its `videoUrl` when a decision needs fuller scene, dialogue, or timing analysis.
+Review the inline contact sheet before choosing a video reference, then call `get_ad` for the selected video when analysis or comparison needs its persisted scene, dialogue, visual-text, audio, hook, or CTA evidence. Use `inspect_media` for generated, uploaded, or external media, or when the stored library analysis cannot answer a material question. Persisted video scenes are approximate semantic boundaries, not verified cuts.
 
 ## License
 
