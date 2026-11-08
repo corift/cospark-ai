@@ -1,107 +1,68 @@
-# Cospark
+# Cospark for AI agents
 
-> **Retired.** Cospark's workflow guidance now ships with the Cospark MCP server itself: agents call `read_docs` (no path) for the docs homepage and load guides on demand. The docs live in [`corift/cospark`](https://github.com/corift/cospark) at `apps/api/src/mcp/cospark/docs/`. This repository and its `cospark` skill are kept for reference and are no longer updated; connect the MCP server below instead of installing the plugin.
+[Cospark](https://www.cospark.so) helps you research ad references and create images, video clips, UGC ads and voiceovers from your AI assistant. This repository provides a small workflow skill and setup instructions for connecting your own Cospark account. The maintained production guides come from the server's `read_docs` tool.
 
-Research ad references and generate or edit images, videos, UGC, and voiceovers from AI agents through Cospark's authenticated remote MCP server.
-
-MCP server: `https://api.cospark.so/api/mcp/cospark`
-
-## Tools
-
-- `generate_image` — generate an image from a prompt.
-- `generate_video` — generate a video from text.
-- `generate_video_from_frames` — animate a starting image with an optional ending image.
-- `generate_video_with_references` — guide a video with reference images, videos, or audio.
-- `generate_ugc_video` — start a complete 9:16 talking-head video from a script, direction, and character image.
-- `get_ugc_video_status` — poll a talking-head run until its reviewed final video is ready.
-- `list_voices` — list available voice IDs and their characteristics.
-- `generate_voiceover` — create narrated audio with duration and timestamped segments.
-- `inspect_media` — inspect video or audio and return timing, transcript, scene analysis, and a viewable contact-sheet image.
-- `upload_media` — import a public URL or prepare a signed upload for a local media file.
-- `search_ads` — search public image or indexed video ads; video results include playable URLs and contact-sheet previews.
-- `get_ad` — retrieve a compact evidence document for an image or indexed video ad, plus playable media and contact-sheet previews.
-- `list_ad_brands` — discover advertiser names before filtering ad search by brand.
-- `list_projects` — list existing projects that can contain a workspace.
-- `create_workspace` — create an editable workspace and return its session ID and chat URL.
-- `list_workspaces` — list recent workspaces in cursor-paginated pages of up to 10.
-- `read_timeline` — read the current tracks and items in a timeline.
-- `compose_timeline` — create a simple multi-track timeline.
-- `edit_timeline` — add, remove, move, or trim timeline items.
-
-## Connect with Codex
-
-Add the server to `~/.codex/config.toml`:
-
-```toml
-[mcp_servers.cospark]
-url = "https://api.cospark.so/api/mcp/cospark"
-auth = "oauth"
-tool_timeout_sec = 900
-```
-
-Then authenticate:
+## Install the skill
 
 ```sh
-codex mcp login cospark
+pnpm dlx skills add corift/cospark-ai --skill cospark
 ```
 
-Codex opens the Cospark sign-in flow and stores the resulting OAuth credentials locally.
+The skill can be installed in clients supported by the skills CLI. A skill-only install does **not** add the MCP server. Add `https://api.cospark.so/mcp` as a remote Streamable HTTP server and sign in through browser OAuth. See [Cospark MCP setup](https://www.cospark.so/mcp).
 
-## Install the plugin from GitHub
-
-The plugin includes one `cospark` skill. Its `SKILL.md` directs the agent to supporting references for product research, Gemini, Seedance, B-roll, production, and Cospark tools.
+For Claude Code:
 
 ```sh
-codex plugin marketplace add corift/cospark-ai --ref main
-codex plugin add cospark@cospark
+claude mcp add --transport http cospark https://api.cospark.so/mcp
 ```
 
-Codex checks configured Git marketplaces during startup and refreshes installed plugins when their repository changes. Start a new Codex thread after installation or an update so the latest skill and MCP tools are loaded.
+Then run `/mcp` and sign in to Cospark. Reuse an existing connection instead of adding a duplicate.
 
-For plugin bundle changes, update `plugins/cospark`, bump the version in `plugins/cospark/.codex-plugin/plugin.json`, and push the commit to `main`. Changes made only to the hosted MCP implementation become available when the server is deployed and do not require a plugin version bump unless the bundled skill, manifest, or MCP configuration also changes.
+## Install in Hermes Agent
 
-## Other MCP clients
+Requires Hermes **0.23.0 or later**. Install the Agent Plugins v1 skill package directly while the catalog submission is under review:
 
-Configure a Streamable HTTP server named `cospark` with this URL:
-
-```text
-https://api.cospark.so/api/mcp/cospark
+```sh
+hermes plugins install corift/cospark-ai#plugins/cospark
 ```
 
-The client must support browser-based OAuth. If it supports configurable tool timeouts, allow at least 10 minutes for video generation.
+The portable package installs the skill. Add the hosted MCP connection separately using Hermes' native OAuth support:
 
-## Media uploads
+```sh
+hermes mcp add cospark --url https://api.cospark.so/mcp --auth oauth
+```
 
-Public media URLs can be used directly. Local files use a two-step signed upload:
+Complete browser sign-in with your own Cospark account and save the connection. If you already have it configured, reuse it; `hermes mcp login cospark` reconnects an existing server. Start a new interactive session so the skill and tools load, then ask:
 
-1. Call `upload_media` with the filename, media type, and byte size.
-2. PUT the local file bytes to the returned signed URL using the returned headers.
-3. Use the returned Cospark file ID in a generation tool.
+> Use Cospark to read its documentation and explain how to turn my product photos into a video ad. Don't generate anything yet.
 
-Local files can be images, videos, or audio up to 100 MB.
+The first tool call should be `read_docs` with no path. If sign-in is unavailable, stop and report the setup requirement. Connecting or reading docs does not prove a paid production workflow has been tested.
 
-## Media inspection
+Once Nous maintainers merge the catalog entry, the short install command will be `hermes plugins install cospark`. A submitted PR is not a published marketplace listing.
 
-`inspect_media` returns its first contact sheet as native MCP image content at the generated resolution, so multimodal MCP clients such as Codex can view the frames directly. It also preserves contact-sheet resource links and structured inspection data for clients that need URLs or access to additional sheets. If the image cannot be embedded, the resource links remain available.
+## What you can ask for
 
-## Ad reference search
+- Research references and plan an ad for a product.
+- Turn supplied product images into an authorized video clip.
+- Create a voiceover from approved dialogue.
+- Inspect a finished video for product and dialogue errors.
 
-Use `search_ads` with `format: "image"` for static creative references or `format: "video"` for indexed video ads. Image queries use visual similarity; video queries search indexed transcripts, scene descriptions, on-screen text, and creative metadata. Video results include short-lived playable `videoUrl` values, chronological `contactSheetUrls`, resource links, and the first contact sheet as native high-detail MCP image content. The links are signed without exposing the private video-library credential.
+The exact tools and supported models are provided by the live server. Ask the agent to read the relevant guides before research, generation or editing. References and view counts are not proof of campaign performance.
 
-Review the inline contact sheet before choosing a video reference, then call `get_ad` for the selected video when analysis or comparison needs its persisted scene, dialogue, visual-text, audio, hook, or CTA evidence. Use `inspect_media` for generated, uploaded, or external media, or when the stored library analysis cannot answer a material question. Persisted video scenes are approximate semantic boundaries, not verified cuts.
+## Data, cost and permissions
 
-## License
+Every MCP request goes to **api.cospark.so** and acts on your signed-in Cospark account. Prompts, selected media and project content supplied to tools are processed by Cospark and the providers required for those operations. Read the [privacy policy](https://www.cospark.so/privacy) and [terms](https://www.cospark.so/terms).
 
-The distribution package in this repository is licensed under the MIT License. The Cospark service and API remain subject to the [Cospark Terms of Service](https://cospark.so/terms).
+Generation, media inspection and social research can spend your Cospark credits. Project writes change your account's files. Paid retries need authorization; retain job IDs and poll existing work to avoid duplicate charges. This package does not authorize posting ads or spending campaign budgets.
 
-## Maintaining skills
+The portable package contains a workflow skill and metadata: no executable plugin code, installation script, OAuth bridge, background process, self-updater or package telemetry. Installing it does not register tools, modify MCP configuration, or access credentials. The separate skills CLI has its own installation telemetry policy.
 
-Behavioral test cases, repeat instructions, and results are in [evals/cospark](evals/cospark/README.md).
+After you explicitly connect the hosted MCP, Hermes handles OAuth discovery, browser sign-in, token storage and refresh. The skill does not read credential stores or change host approval settings. The hosted tools and returned documentation can change independently of the pinned package commit; the catalog SHA pins the skill and metadata, not Cospark's service implementation.
 
-Maintain the entrypoint at `plugins/cospark/skills/cospark/SKILL.md` and its supporting files under `references/`. Agent routing instructions belong in that entrypoint; this README documents installation and maintenance. This repository is the source of truth. Do not edit installed copies under `~/.codex/plugins/cache/` or keep standalone duplicates under `~/.codex/skills/`.
+## Maintenance
 
-The installed plugin is a distribution copy of these sources. If an installed copy contains useful changes, reconcile them into this repository before refreshing the plugin so they are not lost. Keep complementary personal skills such as ad research, copywriting, and cataloging in their own source locations; they are separate capabilities, not additional copies of the plugin skill.
+Version 0.5.0 replaces the retired bundled manuals with a connection-and-routing skill. Production guidance still has one maintained source: the hosted `read_docs` documentation. Historical references and evaluation records in git history are not current model instructions.
 
-After editing, validate the skills and plugin, update the plugin version, commit, and push to `main`. Refresh the Git marketplace with `codex plugin marketplace upgrade cospark`, reinstall with `codex plugin add cospark@cospark`, and start a new task to load the updated skills. Verify that the installed version matches the source manifest and that its `skills/` files match the committed source. Local edits are not synced until they are committed, pushed, and installed; treat publication and reinstall as one update workflow.
+The existing Codex plugin manifest uses `.mcp.json` with native HTTP OAuth. Hermes reads `plugin.json` and the shared skill; its MCP connection is configured separately as shown above. Both use the supported `/mcp` URL. This repository is separate from the OpenAI developer-portal submission package (version 2.1.1); this release does not modify that submission.
 
-The OpenAI submission is a separate release. Upload a fresh skill bundle in the portal for each skill update; pushing to GitHub does not update its published snapshot. Include each skill's `SKILL.md`, `references/`, and `agents/` files in the bundle.
+The package is [MIT licensed](https://github.com/corift/cospark-ai/blob/main/LICENSE); the hosted service remains subject to Cospark's terms.

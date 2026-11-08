@@ -2,7 +2,7 @@
   "mcpServers": {
     "cospark": {
       "type": "http",
-      "url": "https://api.cospark.so/api/mcp/cospark"
+      "url": "https://api.cospark.so/mcp"
     }
   }
 }

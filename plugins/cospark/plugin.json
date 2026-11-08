@@ -1,0 +1,14 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "cospark",
+  "version": "0.5.0",
+  "description": "Cospark workflow skill for ad research, image and video generation, voiceovers, and media inspection. Connect the hosted MCP separately with native OAuth.",
+  "author": {
+    "name": "Cospark",
+    "url": "https://www.cospark.so"
+  },
+  "homepage": "https://www.cospark.so/mcp",
+  "repository": "https://github.com/corift/cospark-ai",
+  "license": "MIT",
+  "keywords": ["ai-video", "image-generation", "ugc", "voiceover", "ad-research", "mcp"]
+}

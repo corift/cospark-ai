@@ -1,33 +1,23 @@
 {
   "name": "cospark",
-  "version": "0.4.0",
-  "description": "Research references and create end-to-end AI video ads from ChatGPT, Codex, and other agents with Cospark.",
+  "version": "0.5.0",
+  "description": "Connect Cospark for ad research, image and video generation, voiceovers, and media inspection.",
   "author": {
     "name": "Cospark",
     "url": "https://cospark.so"
   },
-  "homepage": "https://cospark.so",
+  "homepage": "https://www.cospark.so/mcp",
   "repository": "https://github.com/corift/cospark-ai",
   "license": "MIT",
-  "keywords": [
-    "ai",
-    "image-generation",
-    "video-generation",
-    "ugc",
-    "voiceover",
-    "mcp"
-  ],
+  "keywords": ["ai", "image-generation", "video-generation", "ugc", "voiceover", "mcp"],
   "skills": "./skills/",
   "interface": {
     "displayName": "Cospark",
     "shortDescription": "Create end-to-end AI video ads from chat.",
-    "longDescription": "Search public image and video ad references, then turn scripts and product media into UGC hooks, talking-head ad bodies, product shots, voiceovers, and editable timelines. Inspect exact dialogue and refine individual shots without leaving ChatGPT or Codex.",
+    "longDescription": "Research ad references and create images, video clips, UGC ads and voiceovers through Cospark. Load maintained workflow guidance with read_docs and inspect outputs before delivery.",
     "developerName": "Cospark",
     "category": "Productivity",
-    "capabilities": [
-      "Interactive",
-      "Write"
-    ],
+    "capabilities": ["Interactive", "Write"],
     "websiteURL": "https://cospark.so",
     "privacyPolicyURL": "https://cospark.so/privacy",
     "termsOfServiceURL": "https://cospark.so/terms",
@@ -36,8 +26,7 @@
       "Generate three short hook variants from this exact starting frame and keep the character consistent.",
       "Inspect this finished ad and identify any spoken line that differs from my script.",
       "Find five video ad references for my category and compare their hooks from the contact sheets.",
-      "Replace only the flawed section of this UGC ad without regenerating the full video.",
-      "Assemble these hooks, body clips, and voiceover into an editable ad timeline."
+      "Replace only the flawed section of this UGC ad without regenerating the full video."
     ],
     "brandColor": "#000000",
     "composerIcon": "./assets/icon-submission.png",
